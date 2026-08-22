@@ -19,7 +19,7 @@ const IMAGES = {
 // EDITE AQUI seus links de contato reais.
 // ============================================
 const SOCIAL_LINKS = {
-  github: 'marcos.erculiani@gmail.com', // ex.: 'https://github.com/seu-usuario'
+  github: 'https://github.com/marcoserculianipw', // ex.: 'https://github.com/seu-usuario'
   linkedin: 'linkedin.com/in/marcos-erculiani-50b95a320', // ex.: 'https://linkedin.com/in/seu-usuario'
   email: 'marcos.erculiani@gmail.com', // ex.: 'seuemail@gmail.com'
 };
@@ -52,7 +52,7 @@ const PROJECTS = [
     solution:
       'Dashboard com saldo total, receitas e despesas do período e gráfico comparativo; gestão de contas bancárias com saldo por instituição; categorização de receitas e despesas; histórico de transações com filtros e exportação em Excel, PDF e impressão; autenticação com login e cadastro de usuário.',
     role: 'Minha contribuição no projeto FNCASH foi voltada ao desenvolvimento de parte do front-end, incluindo a criação e estilização das interfaces, além da elaboração e organização da documentação do sistema.',
-    stack: ['Python', 'MySQL'],
+    stack: ['Python', 'MySQL', 'Bootstrap','Java Script'],
     githubUrl: '',
   },
 
