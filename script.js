@@ -53,7 +53,6 @@ const PROJECTS = [
       'Dashboard com saldo total, receitas e despesas do período e gráfico comparativo; gestão de contas bancárias com saldo por instituição; categorização de receitas e despesas; histórico de transações com filtros e exportação em Excel, PDF e impressão; autenticação com login e cadastro de usuário.',
     role: 'Minha contribuição no projeto FNCASH foi voltada ao desenvolvimento de parte do front-end, incluindo a criação e estilização das interfaces, além da elaboração e organização da documentação do sistema.',
     stack: ['Python', 'MySQL', 'Bootstrap','Java Script'],
-    githubUrl: '',
   },
 
   // 👉 Mais projetos podem ser adicionados aqui futuramente,
