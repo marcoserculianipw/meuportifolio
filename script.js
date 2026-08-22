@@ -20,7 +20,7 @@ const IMAGES = {
 // ============================================
 const SOCIAL_LINKS = {
   github: 'https://github.com/marcoserculianipw', // ex.: 'https://github.com/seu-usuario'
-  linkedin: 'linkedin.com/in/marcos-erculiani-50b95a320', // ex.: 'https://linkedin.com/in/seu-usuario'
+  linkedin: 'https://www.linkedin.com/in/marcos-erculiani-50b95a320/', // ex.: 'https://linkedin.com/in/seu-usuario'
   email: 'marcos.erculiani@gmail.com', // ex.: 'seuemail@gmail.com'
 };
 
@@ -140,7 +140,7 @@ function renderProjects() {
   grid.innerHTML = PROJECTS.map((project, index) => {
     const coverSrc = IMAGES[project.cover] || '';
     const featuredClass = index === 0 ? 'featured' : '';
-    const githubLabel = project.githubUrl ? project.githubUrl.replace('https://', '') : '[ADICIONAR LINK DO GITHUB]';
+    const githubLabel = project.githubUrl ? project.githubUrl.replace('https://', '') : '';
     const techBadges = project.stack.map((t) => `<span class="tech">${t}</span>`).join('');
 
     return `
@@ -195,7 +195,7 @@ function openProjectModal(projectId) {
     .join('');
 
   const githubEl = document.getElementById('modalGithub');
-  githubEl.textContent = project.githubUrl ? project.githubUrl.replace('https://', '') : '[ADICIONAR LINK DO GITHUB]';
+  githubEl.textContent = project.githubUrl ? project.githubUrl.replace('https://', '') : '';
 
   currentGallery = project.gallery.map((key) => IMAGES[key]).filter(Boolean);
   currentImageIndex = 0;
