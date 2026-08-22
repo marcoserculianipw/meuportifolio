@@ -19,9 +19,9 @@ const IMAGES = {
 // EDITE AQUI seus links de contato reais.
 // ============================================
 const SOCIAL_LINKS = {
-  github: '', // ex.: 'https://github.com/seu-usuario'
-  linkedin: '', // ex.: 'https://linkedin.com/in/seu-usuario'
-  email: '', // ex.: 'seuemail@gmail.com'
+  github: 'marcos.erculiani@gmail.com', // ex.: 'https://github.com/seu-usuario'
+  linkedin: 'linkedin.com/in/marcos-erculiani-50b95a320', // ex.: 'https://linkedin.com/in/seu-usuario'
+  email: 'marcos.erculiani@gmail.com', // ex.: 'seuemail@gmail.com'
 };
 
 // ============================================
@@ -51,26 +51,11 @@ const PROJECTS = [
       'Falta de uma ferramenta simples para acompanhar contas, receitas e despesas em um só lugar, com visão clara do saldo e das movimentações financeiras.',
     solution:
       'Dashboard com saldo total, receitas e despesas do período e gráfico comparativo; gestão de contas bancárias com saldo por instituição; categorização de receitas e despesas; histórico de transações com filtros e exportação em Excel, PDF e impressão; autenticação com login e cadastro de usuário.',
-    role: '[ADICIONAR: seu papel no projeto — ex.: desenvolvimento solo, modelagem do banco de dados, lógica do sistema, etc.]',
+    role: 'Minha contribuição no projeto FNCASH foi voltada ao desenvolvimento de parte do front-end, incluindo a criação e estilização das interfaces, além da elaboração e organização da documentação do sistema.',
     stack: ['Python', 'MySQL'],
     githubUrl: '',
   },
-  {
-    id: 'viagens',
-    name: 'Viagens',
-    tag: 'Projeto acadêmico — ETEC',
-    cover: 'viagensCover',
-    gallery: ['viagensCover', 'viagensPiscina'],
-    description:
-      'Site institucional estático desenvolvido durante o curso técnico, com foco em prática de front-end e componentes interativos.',
-    problem:
-      'Exercício de front-end proposto na formação técnica, com foco em construir uma página funcional usando um framework CSS e interatividade com JavaScript.',
-    solution:
-      'Página com menu de navegação em dropdown (Bootstrap), múltiplas telas de navegação, imagem de fundo em tela cheia e cards com efeito de hover e transição (zoom suave ao passar o mouse).',
-    role: '[ADICIONAR: seu papel — individual ou em equipe, quais partes você desenvolveu.]',
-    stack: ['HTML', 'CSS', 'Bootstrap', 'jQuery'],
-    githubUrl: '',
-  },
+
   // 👉 Mais projetos podem ser adicionados aqui futuramente,
   // seguindo o mesmo formato dos dois acima.
 ];
