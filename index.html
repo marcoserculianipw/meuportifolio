@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Marcos Vinicius — Desenvolvedor em formação</title>
+<meta name="description" content="Portfólio de Marcos Vinicius Erculiani Chaves, estudante de Desenvolvimento de Software Multiplataforma na FATEC, em busca de estágio na área de tecnologia." />
+<meta name="theme-color" content="#0B0D12" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header id="header">
+  <nav class="nav">
+    <a href="#topo" class="logo">mv<span class="accent-violet">.</span>dev</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#evolucao">Evolução</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button id="menuBtn" class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="topo" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow reveal">// olá, aqui é o</p>
+        <h1 class="hero-title reveal">Marcos<br />Vinicius</h1>
+        <p class="hero-subtitle reveal">Desenvolvedor em formação <span class="faint">|</span> Estudante de DSM na FATEC</p>
+        <p class="typed-line reveal"><span id="typedText"></span><span class="cursor"></span></p>
+
+        <div class="hero-actions reveal">
+          <a href="#projetos" class="btn btn-primary">Ver projetos →</a>
+          <a href="#sobre" class="btn btn-outline">Sobre mim</a>
+          <a href="#" id="githubLink" target="_blank" rel="noreferrer" class="icon-btn" aria-label="GitHub">GH</a>
+          <a href="#" id="linkedinLink" target="_blank" rel="noreferrer" class="icon-btn" aria-label="LinkedIn">in</a>
+          <a href="#contato" class="icon-btn" aria-label="Contato">@</a>
+        </div>
+      </div>
+
+      <div class="hero-photo reveal">
+        <div class="hero-photo-frame">
+          <img id="heroPhoto" src="" alt="Foto de Marcos Vinicius" />
+        </div>
+        <span class="photo-tag">Marcos Vinicius</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container section-grid">
+      <div class="section-heading reveal">
+        <span class="eyebrow">01</span>
+        <h2>Sobre mim</h2>
+      </div>
+      <div class="section-body reveal">
+        <p>Minha formação em tecnologia começou na <strong>ETEC</strong>, no curso Técnico em Desenvolvimento de Sistemas, concluído em 2025. Foi ali que tive meu primeiro contato sério com lógica de programação, banco de dados e desenvolvimento de software — e decidi que era esse o caminho que eu queria seguir.</p>
+        <p>Atualmente curso <strong>Desenvolvimento de Software Multiplataforma na FATEC</strong>, aprofundando conhecimentos em front-end, mobile e sistemas, enquanto trabalho como Jovem Aprendiz na área de logística.</p>
+        <p>Estou em busca da minha primeira oportunidade formal na área de TI — de preferência um estágio onde eu possa aplicar o que venho estudando, aprender com quem já está no mercado e continuar evoluindo como desenvolvedor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section id="tecnologias" class="section">
+    <div class="container section-grid">
+      <div class="section-heading reveal">
+        <span class="eyebrow">02</span>
+        <h2>Tecnologias</h2>
+        <p class="section-desc">O que venho estudando e aplicando na prática, organizado por área.</p>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <h3>Linguagens</h3>
+          <div class="badges"><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Front-end</h3>
+          <div class="badges"><span>React</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Mobile</h3>
+          <div class="badges"><span>React Native</span><span>Expo</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Banco de dados</h3>
+          <div class="badges"><span>MySQL</span><span>Modelagem Relacional</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Business / Low-code</h3>
+          <div class="badges"><span>Power BI</span><span>Power Apps</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Ferramentas</h3>
+          <div class="badges"><span>Microsoft Office</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="section">
+    <div class="container section-grid">
+      <div class="section-heading reveal">
+        <span class="eyebrow">03</span>
+        <h2>Projetos</h2>
+        <p class="section-desc">Do TCC aos projetos de formação — cada um com problema, solução e o que eu fiz.</p>
+      </div>
+
+      <div id="projectsGrid" class="projects-grid reveal"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="section">
+    <div class="container section-grid">
+      <div class="section-heading reveal">
+        <span class="eyebrow">04</span>
+        <h2>Experiência</h2>
+      </div>
+      <div class="reveal">
+        <div class="exp-card">
+          <div class="exp-top">
+            <h3>Jovem Aprendiz — Logística</h3>
+            <span class="mono-small">Intercarta · atual</span>
+          </div>
+          <p class="project-desc">Atuo com processos, documentos, notas fiscais, agendamento de transportes e sistemas internos. Mais do que logística, essa experiência me deu contato direto com rotina empresarial, organização e uso de sistemas no dia a dia — uma base que carrego para a área de tecnologia.</p>
+          <div class="exp-grid">
+            <div class="exp-item">Processos e rotina empresarial</div>
+            <div class="exp-item">Contato direto com sistemas e dados</div>
+            <div class="exp-item">Documentos e notas fiscais</div>
+            <div class="exp-item">Organização e responsabilidade</div>
+            <div class="exp-item">Trabalho em equipe</div>
+            <div class="exp-item">Agendamento e logística de transportes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMACAO -->
+  <section id="formacao" class="section">
+    <div class="container section-grid">
+      <div class="section-heading reveal">
+        <span class="eyebrow">05</span>
+        <h2>Formação</h2>
+      </div>
+      <div class="reveal edu-list">
+        <div class="edu-card">
+          <div>
+            <div class="edu-top"><h3>FATEC</h3><span class="mono-small accent-amber-text">Em andamento</span></div>
+            <p class="faint">Desenvolvimento de Software Multiplataforma</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div>
+            <div class="edu-top"><h3>ETEC</h3><span class="mono-small accent-amber-text">Concluído em 2025</span></div>
+            <p class="faint">Técnico em Desenvolvimento de Sistemas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVOLUCAO -->
+  <section id="evolucao" class="section">
+    <div class="container section-grid">
+      <div class="section-heading reveal">
+        <span class="eyebrow">06</span>
+        <h2>Minha evolução</h2>
+        <p class="section-desc">Cada etapa conectada à próxima — como um caminho, não uma lista solta.</p>
+      </div>
+
+      <ol class="timeline reveal">
+        <li>
+          <span class="dot"></span>
+          <span class="mono-small accent-amber-text">2023–2025</span>
+          <h3>Técnico em Desenvolvimento de Sistemas</h3>
+          <p class="faint mono">ETEC</p>
+          <p class="tl-desc">Início da formação técnica em Desenvolvimento de Sistemas, com primeiro contato com lógica de programação, banco de dados e desenvolvimento de software.</p>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <span class="mono-small accent-amber-text">2025</span>
+          <h3>Conclusão do curso técnico</h3>
+          <p class="faint mono">ETEC</p>
+          <p class="tl-desc">Conclusão do Técnico em Desenvolvimento de Sistemas, com o FNCASH como projeto de encerramento da formação.</p>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <span class="mono-small accent-amber-text">2025</span>
+          <h3>Entrada na FATEC</h3>
+          <p class="faint mono">FATEC</p>
+          <p class="tl-desc">Início da graduação em Desenvolvimento de Software Multiplataforma, aprofundando conhecimentos em front-end, mobile e sistemas.</p>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <span class="mono-small accent-amber-text">Atual</span>
+          <h3>Jovem Aprendiz — Logística</h3>
+          <p class="faint mono">Intercarta</p>
+          <p class="tl-desc">Atuação em processos, documentos e sistemas na área de logística, desenvolvendo organização e visão de rotina empresarial.</p>
+        </li>
+        <li>
+          <span class="dot dot-next"></span>
+          <span class="mono-small accent-amber-text">Próximo passo</span>
+          <h3>Primeira oportunidade em TI</h3>
+          <p class="faint mono">Em busca</p>
+          <p class="tl-desc">Buscando uma posição de estágio para aplicar o que venho construindo e continuar evoluindo como desenvolvedor.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <div class="container section-grid">
+      <div class="section-heading reveal">
+        <span class="eyebrow">07</span>
+        <h2>Contato</h2>
+        <p class="section-desc">Estou disponível para conversar sobre oportunidades de estágio.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <a href="mailto:" id="emailLink" class="contact-card">
+          <span class="mono-small">Email</span>
+          <p>[ADICIONAR EMAIL]</p>
+        </a>
+        <a href="#" id="linkedinLink2" target="_blank" rel="noreferrer" class="contact-card">
+          <span class="mono-small">LinkedIn</span>
+          <p>[ADICIONAR LINK DO LINKEDIN]</p>
+        </a>
+        <a href="#" id="githubLink2" target="_blank" rel="noreferrer" class="contact-card">
+          <span class="mono-small">GitHub</span>
+          <p>[ADICIONAR LINK DO GITHUB]</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>Marcos Vinicius Erculiani Chaves © <span id="year"></span></span>
+    <span>desenvolvido com HTML, CSS e JavaScript</span>
+  </div>
+</footer>
+
+<div id="projectModal" class="modal-overlay" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button id="modalClose" class="modal-close" aria-label="Fechar detalhes do projeto">✕</button>
+
+    <div class="modal-gallery">
+      <div class="modal-gallery-main">
+        <img id="modalMainImg" src="" alt="" />
+      </div>
+      <div id="modalThumbs" class="modal-thumbs"></div>
+    </div>
+
+    <div class="modal-content">
+      <div class="project-top">
+        <span id="modalTag" class="tag"></span>
+        <span id="modalGithub" class="mono-small"></span>
+      </div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc" class="project-desc"></p>
+      <dl class="project-details">
+        <div><dt>Problema</dt><dd id="modalProblem"></dd></div>
+        <div><dt>Solução</dt><dd id="modalSolution"></dd></div>
+        <div><dt>Meu papel</dt><dd id="modalRole"></dd></div>
+      </dl>
+      <div id="modalStack" class="badges"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
