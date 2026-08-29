@@ -1,52 +1,56 @@
-# Portfólio — Marcos Vinicius (versão simples)
+# Portfólio — Marcos Vinicius
 
-Versão **sem Node, sem npm, sem terminal**. Só 3 arquivos: `index.html`,
-`style.css` e `script.js`. Todas as imagens (sua foto e os prints dos
-projetos) estão **embutidas diretamente dentro do `script.js`** — não existe
-mais pasta de imagens. Isso significa que, não importa como você abra ou mova
-esses 3 arquivos, as fotos sempre vão aparecer.
+Meu portfólio pessoal, criado para apresentar um pouco sobre mim, meus projetos e o que venho aprendendo na área de tecnologia.
 
-## Como ver o site
+🌐 **Acesse o portfólio:**
+[marcoserculianipw.github.io/marcos-portifolio](https://marcoserculianipw.github.io/marcos-portifolio/)
 
-Dê **dois cliques no `index.html`**. Abre no navegador, sem instalar nada.
+## Sobre o projeto
 
-> Importante: se você baixou um `.zip`, **extraia ele primeiro** (botão
-> direito → "Extrair Tudo...") antes de abrir o `index.html`. Abrir o arquivo
-> de dentro do zip sem extrair pode causar problemas.
+Este site foi desenvolvido como meu portfólio pessoal para reunir meus principais projetos, conhecimentos e formas de contato.
 
-## O que tem de novo
+A ideia é manter o projeto simples e organizado, enquanto continuo evoluindo e adicionando novos projetos ao longo da minha formação.
 
-- **Clique em qualquer projeto** para abrir uma janela com mais fotos e a
-  descrição completa (problema, solução, tecnologias e seu papel).
-- **Sua foto aparece logo na primeira seção** (Hero), não só lá embaixo.
-- Por enquanto só os projetos **FNCASH** e **Viagens** estão no site — dá pra
-  adicionar mais depois (veja como, abaixo).
+## Projeto em destaque
 
-## O que falta preencher
+### FNCASH
 
-Abra o `script.js` em qualquer editor de texto (Bloco de Notas serve) e vá
-até o topo do arquivo, na parte depois do bloco gigante de imagens em
-base64 — procure por `SOCIAL_LINKS` e `PROJECTS`:
+Sistema de gestão financeira desenvolvido como projeto de conclusão do curso Técnico em Desenvolvimento de Sistemas.
 
-```js
-const SOCIAL_LINKS = {
-  github: '',   // ex: 'https://github.com/seu-usuario'
-  linkedin: '', // ex: 'https://linkedin.com/in/seu-usuario'
-  email: '',    // ex: 'seuemail@gmail.com'
-};
+O sistema foi desenvolvido com o objetivo de facilitar o controle e a organização das finanças de forma simples e intuitiva.
+
+## Tecnologias utilizadas
+
+* HTML5
+* CSS3
+* JavaScript
+* Git
+* GitHub Pages
+
+## Estrutura do projeto
+
+```text
+marcos-portifolio/
+├── index.html
+├── style.css
+└── script.js
 ```
 
-E dentro de cada projeto em `PROJECTS`, procure pelos campos marcados com
-`[ADICIONAR ...]` — é onde falta você preencher (por exemplo, seu papel em
-cada projeto).
+As imagens utilizadas no portfólio estão incorporadas diretamente no `script.js`, evitando a necessidade de uma pasta separada para elas.
 
-## Como adicionar um novo projeto no futuro
+## Como executar
 
-1. Adicione as fotos do novo projeto em algum site de imagem base64 (ex:
-   [base64-image.de](https://www.base64-image.de/)) ou me peça para gerar.
-2. Copie um dos blocos `{ ... }` dentro do array `PROJECTS` no `script.js`.
-3. Cole logo abaixo, ajuste `id`, `name`, `description`, `problem`,
-   `solution`, `role`, `stack` e as chaves de `gallery`/`cover` para apontar
+Não é necessário instalar nenhuma dependência.
+
+Basta clonar ou baixar o repositório e abrir o arquivo `index.html` no navegador.
+
+## Publicação
+
+O portfólio está publicado gratuitamente através do **GitHub Pages**.
+
+---
+
+Desenvolvido por **Marcos Vinicius**.
    para as novas imagens dentro do objeto `IMAGES`.
 
 ## Como publicar no GitHub Pages
