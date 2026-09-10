@@ -52,7 +52,7 @@ const PROJECTS = [
     solution:
       'Dashboard com saldo total, receitas e despesas do período e gráfico comparativo; gestão de contas bancárias com saldo por instituição; categorização de receitas e despesas; histórico de transações com filtros e exportação em Excel, PDF e impressão; autenticação com login e cadastro de usuário.',
     role: 'Minha contribuição no projeto FNCASH foi voltada ao desenvolvimento de parte do front-end, incluindo a criação e estilização das interfaces, além da elaboração e organização da documentação do sistema.',
-    stack: ['Python', 'MySQL', 'Bootstrap','Java Script'],
+    stack: ['Python', 'MySQL', 'Bootstrap', 'JavaScript'],
   },
 
   // 👉 Mais projetos podem ser adicionados aqui futuramente,
@@ -69,18 +69,16 @@ function setupSocialLinks() {
 
   if (github) {
     githubEls.forEach((el) => el && (el.href = github));
-    const p = document.getElementById('githubLink2')?.querySelector('p');
-    if (p) p.textContent = github.replace('https://', '');
+    const label = document.getElementById('githubLink2')?.querySelector('strong');
+    if (label) label.textContent = `@${github.split('/').filter(Boolean).pop()}`;
   }
   if (linkedin) {
     linkedinEls.forEach((el) => el && (el.href = linkedin));
-    const p = document.getElementById('linkedinLink2')?.querySelector('p');
-    if (p) p.textContent = linkedin.replace('https://', '');
   }
   if (email && emailEl) {
     emailEl.href = `mailto:${email}`;
-    const p = emailEl.querySelector('p');
-    if (p) p.textContent = email;
+    const label = emailEl.querySelector('strong');
+    if (label) label.textContent = email;
   }
 }
 
@@ -90,46 +88,41 @@ function setupHeroPhoto() {
   if (img && IMAGES.profile) img.src = IMAGES.profile;
 }
 
-// Efeito de máquina de escrever na frase abaixo do subtítulo do Hero
-function typeWriter() {
-  const text = 'construindo uma carreira em tecnologia, um projeto por vez.';
-  const el = document.getElementById('typedText');
-  if (!el) return;
-  let i = 0;
-  setTimeout(() => {
-    const interval = setInterval(() => {
-      i += 1;
-      el.textContent = text.slice(0, i);
-      if (i >= text.length) clearInterval(interval);
-    }, 38);
-  }, 500);
-}
-
 // Header muda de fundo ao rolar a página
 function setupHeaderScroll() {
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
+  const updateHeader = () => {
     if (window.scrollY > 12) header.classList.add('scrolled');
     else header.classList.remove('scrolled');
-  });
+  };
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
 }
 
 // Menu mobile
 function setupMobileMenu() {
   const btn = document.getElementById('menuBtn');
   const links = document.getElementById('navLinks');
+  const closeMenu = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Abrir menu');
+  };
+
   btn.addEventListener('click', () => {
     const isOpen = links.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
     btn.setAttribute('aria-expanded', String(isOpen));
-    btn.textContent = isOpen ? '✕' : '☰';
+    btn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
   });
-  links.querySelectorAll('a').forEach((a) =>
-    a.addEventListener('click', () => {
-      links.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      btn.textContent = '☰';
-    })
-  );
+  links.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) closeMenu();
+  });
 }
 
 // Renderiza os cards de projeto a partir do array PROJECTS
@@ -179,6 +172,8 @@ function renderProjects() {
 // ============================================
 let currentGallery = [];
 let currentImageIndex = 0;
+let currentProjectName = '';
+let lastFocusedElement = null;
 
 function openProjectModal(projectId) {
   const project = PROJECTS.find((p) => p.id === projectId);
@@ -199,17 +194,22 @@ function openProjectModal(projectId) {
 
   currentGallery = project.gallery.map((key) => IMAGES[key]).filter(Boolean);
   currentImageIndex = 0;
+  currentProjectName = project.name;
   renderModalGallery();
 
   const modal = document.getElementById('projectModal');
+  lastFocusedElement = document.activeElement;
   modal.hidden = false;
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('modal-open');
   document.getElementById('modalClose').focus();
 }
 
 function renderModalGallery() {
   const mainImg = document.getElementById('modalMainImg');
   mainImg.src = currentGallery[currentImageIndex] || '';
+  mainImg.alt = currentGallery.length
+    ? `Tela ${currentImageIndex + 1} do projeto ${currentProjectName}`
+    : '';
 
   const thumbs = document.getElementById('modalThumbs');
   if (currentGallery.length <= 1) {
@@ -221,7 +221,7 @@ function renderModalGallery() {
   thumbs.innerHTML = currentGallery
     .map(
       (src, i) =>
-        `<button class="modal-thumb ${i === currentImageIndex ? 'active' : ''}" data-index="${i}" aria-label="Ver imagem ${i + 1}"><img src="${src}" alt="" /></button>`
+        `<button class="modal-thumb ${i === currentImageIndex ? 'active' : ''}" data-index="${i}" aria-label="Ver tela ${i + 1} de ${currentGallery.length}"><img src="${src}" alt="" /></button>`
     )
     .join('');
 
@@ -235,8 +235,10 @@ function renderModalGallery() {
 
 function closeProjectModal() {
   const modal = document.getElementById('projectModal');
+  if (modal.hidden) return;
   modal.hidden = true;
-  document.body.style.overflow = '';
+  document.body.classList.remove('modal-open');
+  if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
 }
 
 function setupModal() {
@@ -246,7 +248,29 @@ function setupModal() {
     if (e.target === modal) closeProjectModal();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.hidden) closeProjectModal();
+    if (modal.hidden) return;
+    if (e.key === 'Escape') closeProjectModal();
+    if (e.key === 'ArrowRight' && currentGallery.length > 1) {
+      currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+      renderModalGallery();
+    }
+    if (e.key === 'ArrowLeft' && currentGallery.length > 1) {
+      currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+      renderModalGallery();
+    }
+    if (e.key === 'Tab') {
+      const focusable = [...modal.querySelectorAll('button:not([disabled]), a[href]')];
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 }
 
@@ -256,6 +280,11 @@ function setupScrollReveal() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (prefersReducedMotion) {
+    items.forEach((el) => el.classList.add('visible'));
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('visible'));
     return;
   }
@@ -283,7 +312,6 @@ function setupYear() {
 document.addEventListener('DOMContentLoaded', () => {
   setupSocialLinks();
   setupHeroPhoto();
-  typeWriter();
   setupHeaderScroll();
   setupMobileMenu();
   renderProjects();

@@ -1,290 +1,199 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Marcos Erculiani — Desenvolvedor em formação</title>
-<meta name="description" content="Portfólio de Marcos Vinicius Erculiani Chaves, estudante de Desenvolvimento de Software Multiplataforma na FATEC, em busca de estágio na área de tecnologia." />
-<meta name="theme-color" content="#0B0D12" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Marcos Vinicius Erculiani Chaves, estudante de Desenvolvimento de Software Multiplataforma na FATEC e candidato a estágio em tecnologia.">
+  <meta name="theme-color" content="#0a0d13">
+  <title>Marcos Erculiani — Desenvolvimento de Software</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<header id="header">
-  <nav class="nav">
-    <a href="#topo" class="logo"><span class="accent-violet"></span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#tecnologias">Tecnologias</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#formacao">Formação</a></li>
-      <li><a href="#evolucao">Evolução</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-    <button id="menuBtn" class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
-  </nav>
-</header>
+  <header class="site-header" id="header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#topo" class="logo" aria-label="Marcos Erculiani, início">MV<span>/</span></a>
 
-<main>
+      <button id="menuBtn" class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
 
-  <!-- HERO -->
-  <section id="topo" class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow reveal">// olá, aqui é o</p>
-        <h1 class="hero-title reveal">Marcos<br />Erculiani</h1>
-        <p class="hero-subtitle reveal">Desenvolvedor em formação <span class="faint">|</span> Estudante de DSM na FATEC</p>
-        <p class="typed-line reveal"><span id="typedText"></span><span class="cursor"></span></p>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#projetos">Projeto</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
 
-        <div class="hero-actions reveal">
-          <a href="#projetos" class="btn btn-primary">Ver projetos →</a>
-          <a href="#sobre" class="btn btn-outline">Sobre mim</a>
-          <a href="#" id="githubLink" target="_blank" rel="noreferrer" class="icon-btn" aria-label="GitHub">GitHub</a>
-          <a href="#" id="linkedinLink" target="_blank" rel="noreferrer" class="icon-btn" aria-label="LinkedIn">LinkedIn</a>
-          <a href="#contato" class="icon-btn" aria-label="Contato">@</a>
-        </div>
-      </div>
+      <a class="nav-contact" href="mailto:marcos.erculiani@gmail.com">marcos.erculiani@gmail.com</a>
+    </nav>
+  </header>
 
-      <div class="hero-photo reveal">
-        <div class="hero-photo-frame">
-          <img id="heroPhoto" src="" alt="Foto de Marcos Vinicius" />
-        </div>
-        <span class="photo-tag"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre" class="section">
-    <div class="container section-grid">
-      <div class="section-heading reveal">
-        <span class="eyebrow">01</span>
-        <h2>Sobre mim</h2>
-      </div>
-      <div class="section-body reveal">
-        <p>Minha formação em tecnologia começou na <strong>ETEC</strong>, no curso Técnico em Desenvolvimento de Sistemas, concluído em 2025. Foi ali que tive meu primeiro contato sério com lógica de programação, banco de dados e desenvolvimento de software — e decidi que era esse o caminho que eu queria seguir.</p>
-        <p>Atualmente curso <strong>Desenvolvimento de Software Multiplataforma na FATEC</strong>, aprofundando conhecimentos em front-end, mobile e sistemas, enquanto trabalho como Jovem Aprendiz na área de logística.</p>
-        <p>Estou em busca da minha primeira oportunidade formal na área de TI — de preferência um estágio onde eu possa aplicar o que venho estudando, aprender com quem já está no mercado e continuar evoluindo como desenvolvedor.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECNOLOGIAS -->
-  <section id="tecnologias" class="section">
-    <div class="container section-grid">
-      <div class="section-heading reveal">
-        <span class="eyebrow">02</span>
-        <h2>Tecnologias</h2>
-        <p class="section-desc">O que venho estudando e aplicando na prática, organizado por área.</p>
-      </div>
-      <div class="skills-grid reveal">
-        <div class="skill-card">
-          <h3>Linguagens</h3>
-          <div class="badges"><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Front-end</h3>
-          <div class="badges"><span>React</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Mobile</h3>
-          <div class="badges"><span>React Native</span><span>Expo</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Banco de dados</h3>
-          <div class="badges"><span>MySQL</span><span>Modelagem Relacional</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Business / Low-code</h3>
-          <div class="badges"><span>Power BI</span><span>Power Apps</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Ferramentas</h3>
-          <div class="badges"><span>Microsoft Office</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJETOS -->
-  <section id="projetos" class="section">
-    <div class="container section-grid">
-      <div class="section-heading reveal">
-        <span class="eyebrow">03</span>
-        <h2>Projetos</h2>
-        <p class="section-desc">Do TCC aos projetos de formação — cada um com problema, solução e o que eu fiz.</p>
-      </div>
-
-      <div id="projectsGrid" class="projects-grid reveal"></div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCIA -->
-  <section id="experiencia" class="section">
-    <div class="container section-grid">
-      <div class="section-heading reveal">
-        <span class="eyebrow">04</span>
-        <h2>Experiência</h2>
-      </div>
-      <div class="reveal">
-        <div class="exp-card">
-          <div class="exp-top">
-            <h3>Jovem Aprendiz — Logística</h3>
-            <span class="mono-small">Intercarta · atual</span>
-          </div>
-          <p class="project-desc">Atuo com processos, documentos, notas fiscais, agendamento de transportes e sistemas internos. Mais do que logística, essa experiência me deu contato direto com rotina empresarial, organização e uso de sistemas no dia a dia — uma base que carrego para a área de tecnologia.</p>
-          <div class="exp-grid">
-            <div class="exp-item">Processos e rotina empresarial</div>
-            <div class="exp-item">Contato direto com sistemas e dados</div>
-            <div class="exp-item">Documentos e notas fiscais</div>
-            <div class="exp-item">Organização e responsabilidade</div>
-            <div class="exp-item">Trabalho em equipe</div>
-            <div class="exp-item">Agendamento e logística de transportes</div>
+  <main id="conteudo">
+    <section id="topo" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="availability"><span aria-hidden="true"></span> Disponível para estágio em tecnologia</div>
+          <p class="overline">Desenvolvimento de software • São Paulo, Brasil</p>
+          <h1>Marcos<br><strong>Erculiani</strong></h1>
+          <p class="hero-intro">Estudante de Desenvolvimento de Software Multiplataforma na FATEC. Gosto de transformar problemas bem definidos em interfaces claras e sistemas que funcionam.</p>
+          <div class="hero-actions">
+            <a href="#projetos" class="button button-primary">Ver projeto em destaque <span aria-hidden="true">↓</span></a>
+            <a href="https://github.com/marcoserculianipw" id="githubLink" target="_blank" rel="noopener noreferrer" class="text-link">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/marcos-erculiani-50b95a320/" id="linkedinLink" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn ↗</a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- FORMACAO -->
-  <section id="formacao" class="section">
-    <div class="container section-grid">
-      <div class="section-heading reveal">
-        <span class="eyebrow">05</span>
-        <h2>Formação</h2>
+        <div class="hero-visual reveal delay-1">
+          <div class="photo-index" aria-hidden="true">01 / 01</div>
+          <div class="hero-photo-frame">
+            <img id="heroPhoto" alt="Marcos Vinicius Erculiani Chaves" width="720" height="900">
+          </div>
+          <p>Desenvolvedor em formação<br>FATEC • DSM</p>
+        </div>
       </div>
-      <div class="reveal edu-list">
-        <div class="edu-card">
+
+      <div class="hero-bottom container" aria-hidden="true">
+        <span>PORTFÓLIO / 2026</span>
+        <span>HTML • CSS • JAVASCRIPT • PYTHON</span>
+      </div>
+    </section>
+
+    <section id="projetos" class="section project-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-number">01</p>
           <div>
-            <div class="edu-top"><h3>FATEC</h3><span class="mono-small accent-amber-text">Em andamento</span></div>
-            <p class="faint">Desenvolvimento de Software Multiplataforma</p>
+            <p class="overline">Trabalho selecionado</p>
+            <h2>Projeto em destaque</h2>
           </div>
-        </div>
-        <div class="edu-card">
+          <p class="section-note">Um projeto completo vale mais do que uma lista de ideias pela metade.</p>
+        </header>
+
+        <div id="projectsGrid" class="projects-grid reveal"></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section about-section">
+      <div class="container about-grid">
+        <header class="section-header compact reveal">
+          <p class="section-number">02</p>
           <div>
-            <div class="edu-top"><h3>ETEC</h3><span class="mono-small accent-amber-text">Concluído em 2025</span></div>
-            <p class="faint">Técnico em Desenvolvimento de Sistemas</p>
+            <p class="overline">Sobre mim</p>
+            <h2>Aprendendo na prática.</h2>
+          </div>
+        </header>
+
+        <div class="about-copy reveal delay-1">
+          <p class="about-lead">Comecei no Técnico em Desenvolvimento de Sistemas da ETEC e hoje curso DSM na FATEC. É uma trajetória ainda no início — e justamente por isso levo cada projeto como oportunidade de aprender de verdade.</p>
+          <div class="about-columns">
+            <p>Tenho interesse por front-end, desenvolvimento mobile e sistemas. No FNCASH, participei da construção das interfaces e da documentação, trabalhando em equipe até a entrega do projeto final.</p>
+            <p>Fora da faculdade, trabalho como Jovem Aprendiz em logística. A rotina me ensinou organização, responsabilidade e como sistemas e dados fazem parte de processos reais.</p>
           </div>
         </div>
+
+        <div class="skills reveal">
+          <p class="overline">Tecnologias com as quais já trabalhei</p>
+          <dl>
+            <div><dt>Base</dt><dd>HTML, CSS, JavaScript, Python</dd></div>
+            <div><dt>Interfaces</dt><dd>React, React Native, Expo, Bootstrap</dd></div>
+            <div><dt>Dados</dt><dd>MySQL, modelagem relacional, Power BI</dd></div>
+            <div><dt>Ferramentas</dt><dd>Git, GitHub, Power Apps, Microsoft Office</dd></div>
+          </dl>
+        </div>
       </div>
+    </section>
+
+    <section id="trajetoria" class="section path-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-number">03</p>
+          <div>
+            <p class="overline">Trajetória</p>
+            <h2>Formação e experiência</h2>
+          </div>
+          <p class="section-note">Conhecimento técnico em construção, apoiado por experiência profissional real.</p>
+        </header>
+
+        <div class="path-list reveal">
+          <article>
+            <time>Atual</time>
+            <div><p class="path-kind">Experiência profissional</p><h3>Jovem Aprendiz — Logística</h3><p>Intercarta</p></div>
+            <p>Rotinas com documentos, notas fiscais, agendamento de transportes e sistemas internos. Uma experiência que fortaleceu minha organização e visão de processos.</p>
+          </article>
+          <article>
+            <time>Em andamento</time>
+            <div><p class="path-kind">Graduação</p><h3>Desenvolvimento de Software Multiplataforma</h3><p>FATEC</p></div>
+            <p>Formação voltada a aplicações web, mobile, banco de dados e desenvolvimento de sistemas.</p>
+          </article>
+          <article>
+            <time>Concluído em 2025</time>
+            <div><p class="path-kind">Curso técnico</p><h3>Técnico em Desenvolvimento de Sistemas</h3><p>ETEC</p></div>
+            <p>Primeira formação na área e origem do FNCASH, desenvolvido como projeto de conclusão de curso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+      <div class="container contact-grid reveal">
+        <p class="section-number">04</p>
+        <div>
+          <p class="overline">Contato</p>
+          <h2>Procuro minha primeira oportunidade em TI.</h2>
+          <p>Se você tem uma vaga de estágio ou quer conversar sobre algum projeto, pode falar comigo por qualquer um dos canais abaixo.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:marcos.erculiani@gmail.com" id="emailLink"><span>Email</span><strong>marcos.erculiani@gmail.com</strong><b aria-hidden="true">↗</b></a>
+          <a href="https://www.linkedin.com/in/marcos-erculiani-50b95a320/" id="linkedinLink2" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Marcos Erculiani</strong><b aria-hidden="true">↗</b></a>
+          <a href="https://github.com/marcoserculianipw" id="githubLink2" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>@marcoserculianipw</strong><b aria-hidden="true">↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Marcos Vinicius Erculiani Chaves</span>
+      <span>© <span id="year">2026</span></span>
+      <a href="#topo">Voltar ao topo ↑</a>
     </div>
-  </section>
+  </footer>
 
-  <!-- EVOLUCAO -->
-  <section id="evolucao" class="section">
-    <div class="container section-grid">
-      <div class="section-heading reveal">
-        <span class="eyebrow">06</span>
-        <h2>Minha evolução</h2>
-        <p class="section-desc">Cada etapa conectada à próxima — como um caminho, não uma lista solta.</p>
+  <div id="projectModal" class="modal-overlay" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+      <button id="modalClose" class="modal-close" type="button" aria-label="Fechar detalhes do projeto">Fechar ×</button>
+
+      <div class="modal-gallery">
+        <div class="modal-gallery-main">
+          <img id="modalMainImg" alt="" width="1280" height="720">
+        </div>
+        <div id="modalThumbs" class="modal-thumbs" aria-label="Imagens do projeto"></div>
       </div>
 
-      <ol class="timeline reveal">
-        <li>
-          <span class="dot"></span>
-          <span class="mono-small accent-amber-text">2023–2025</span>
-          <h3>Técnico em Desenvolvimento de Sistemas</h3>
-          <p class="faint mono">ETEC</p>
-          <p class="tl-desc">Início da formação técnica em Desenvolvimento de Sistemas, com primeiro contato com lógica de programação, banco de dados e desenvolvimento de software.</p>
-        </li>
-        <li>
-          <span class="dot"></span>
-          <span class="mono-small accent-amber-text">2025</span>
-          <h3>Conclusão do curso técnico</h3>
-          <p class="faint mono">ETEC</p>
-          <p class="tl-desc">Conclusão do Técnico em Desenvolvimento de Sistemas, com o FNCASH como projeto de encerramento da formação.</p>
-        </li>
-        <li>
-          <span class="dot"></span>
-          <span class="mono-small accent-amber-text">2025</span>
-          <h3>Entrada na FATEC</h3>
-          <p class="faint mono">FATEC</p>
-          <p class="tl-desc">Início da graduação em Desenvolvimento de Software Multiplataforma, aprofundando conhecimentos em front-end, mobile e sistemas.</p>
-        </li>
-        <li>
-          <span class="dot"></span>
-          <span class="mono-small accent-amber-text">Atual</span>
-          <h3>Jovem Aprendiz — Logística</h3>
-          <p class="faint mono">Intercarta</p>
-          <p class="tl-desc">Atuação em processos, documentos e sistemas na área de logística, desenvolvendo organização e visão de rotina empresarial.</p>
-        </li>
-        <li>
-          <span class="dot dot-next"></span>
-          <span class="mono-small accent-amber-text">Próximo passo</span>
-          <h3>Primeira oportunidade em TI</h3>
-          <p class="faint mono">Em busca</p>
-          <p class="tl-desc">Buscando uma posição de estágio para aplicar o que venho construindo e continuar evoluindo como desenvolvedor.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="section">
-    <div class="container section-grid">
-      <div class="section-heading reveal">
-        <span class="eyebrow">07</span>
-        <h2>Contato</h2>
-        <p class="section-desc">Estou disponível para conversar sobre oportunidades de estágio.</p>
+      <div class="modal-content">
+        <div class="project-top">
+          <span id="modalTag" class="tag"></span>
+          <span id="modalGithub" class="mono-small"></span>
+        </div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc" class="project-desc"></p>
+        <dl class="project-details">
+          <div><dt>Problema</dt><dd id="modalProblem"></dd></div>
+          <div><dt>Solução</dt><dd id="modalSolution"></dd></div>
+          <div><dt>Minha participação</dt><dd id="modalRole"></dd></div>
+        </dl>
+        <div id="modalStack" class="badges"></div>
       </div>
-      <div class="contact-grid reveal">
-        <a href="mailto:" id="emailLink" class="contact-card">
-          <span class="mono-small">Email</span>
-          <p>[ADICIONAR EMAIL]</p>
-        </a>
-        <a href="#" id="linkedinLink2" target="_blank" rel="noreferrer" class="contact-card">
-          <span class="mono-small">LinkedIn</span>
-          <p>[ADICIONAR LINK DO LINKEDIN]</p>
-        </a>
-        <a href="#" id="githubLink2" target="_blank" rel="noreferrer" class="contact-card">
-          <span class="mono-small">GitHub</span>
-          <p></p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <span>Marcos Vinicius Erculiani Chaves © <span id="year"></span></span>
-    <span>desenvolvido com HTML, CSS e JavaScript</span>
-  </div>
-</footer>
-
-<div id="projectModal" class="modal-overlay" hidden>
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button id="modalClose" class="modal-close" aria-label="Fechar detalhes do projeto">✕</button>
-
-    <div class="modal-gallery">
-      <div class="modal-gallery-main">
-        <img id="modalMainImg" src="" alt="" />
-      </div>
-      <div id="modalThumbs" class="modal-thumbs"></div>
-    </div>
-
-    <div class="modal-content">
-      <div class="project-top">
-        <span id="modalTag" class="tag"></span>
-        <span id="modalGithub" class="mono-small"></span>
-      </div>
-      <h3 id="modalTitle"></h3>
-      <p id="modalDesc" class="project-desc"></p>
-      <dl class="project-details">
-        <div><dt>Problema</dt><dd id="modalProblem"></dd></div>
-        <div><dt>Solução</dt><dd id="modalSolution"></dd></div>
-        <div><dt>Meu papel</dt><dd id="modalRole"></dd></div>
-      </dl>
-      <div id="modalStack" class="badges"></div>
     </div>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
