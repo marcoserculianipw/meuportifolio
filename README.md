@@ -1,30 +1,34 @@
-# Portfólio — Marcos Vinicius Erculiani Chaves
+# Portfólio — Marcos Erculiani
 
-Portfólio pessoal criado para apresentar minha formação, experiência e projetos em desenvolvimento de software.
+Site pessoal para apresentação de projetos, formação acadêmica e trajetória em desenvolvimento de software.
 
-## Projeto em destaque
+Demo online: https://marcoserculianipw.github.io/marcos-portifolio/
 
-### FNCASH
+![Página inicial do Portfólio](docs/screenshot.png)
 
-Sistema de gestão financeira desenvolvido como trabalho de conclusão do curso Técnico em Desenvolvimento de Sistemas. Participei do desenvolvimento das interfaces e da organização da documentação do projeto.
+## Sobre o projeto
+
+Desenvolvi meu portfólio com foco em clareza e carregamento rápido para apresentar meu perfil profissional a recrutadores técnicos. A página reúne minha formação acadêmica (Técnico pela ETEC e estudante de DSM na FATEC), projetos práticos desenvolvidos e canais diretos de contato. As imagens de apoio foram embutidas em Base64 no próprio script para assegurar que a interface funcione sem dependência de caminhos externos.
+
+## Seções da página
+
+- **Apresentação:** síntese do meu perfil profissional e objetivo de estágio em desenvolvimento
+- **Projeto em Destaque:** apresentação do FNCASH (sistema de gestão financeira desenvolvido como TCC do curso técnico da ETEC)
+- **Sobre Mim:** histórico de formação e experiência prática de rotina como Jovem Aprendiz em logística
+- **Contato:** atalhos diretos para e-mail, perfil no LinkedIn e repositórios no GitHub
 
 ## Tecnologias
 
-- HTML5
-- CSS3
-- JavaScript
-- Git e GitHub
+- HTML5 semântico
+- CSS3 (Flexbox, Grid, variáveis de estilo e tipografia)
+- JavaScript puro (Vanilla JS)
 
-## Executar localmente
+## Como rodar localmente
 
-Não há dependências ou etapa de compilação. Abra o arquivo `index.html` no navegador ou sirva a pasta com um servidor HTTP local.
+Não há etapas de build ou instalação de dependências:
 
-## Publicação
-
-O site é publicado pelo GitHub Pages:
-
-[marcoserculianipw.github.io/marcos-portifolio](https://marcoserculianipw.github.io/marcos-portifolio/)
-
----
-
-Desenvolvido por Marcos Vinicius Erculiani Chaves.
+1. Clone o repositório:
+```bash
+git clone https://github.com/marcoserculianipw/marcos-portifolio.git
+```
+2. Abra o arquivo `index.html` diretamente em seu navegador.
