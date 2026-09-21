@@ -13,7 +13,7 @@ Desenvolvi meu portfólio com foco em clareza e carregamento rápido para aprese
 ## Seções da página
 
 - **Apresentação:** síntese do meu perfil profissional e objetivo de estágio em desenvolvimento
-- **Projeto em Destaque:** apresentação do FNCASH (sistema de gestão financeira desenvolvido como TCC do curso técnico da ETEC)
+- **Projetos:** apresentação do FNCASH (sistema de gestão financeira - TCC ETEC), Painel de Automação Desktop (ferramenta operacional em PowerShell e WPF) e Landing Page do Lucas Pelizer (nutricionista esportivo real)
 - **Sobre Mim:** histórico de formação e experiência prática de rotina como Jovem Aprendiz em logística
 - **Contato:** atalhos diretos para e-mail, perfil no LinkedIn e repositórios no GitHub
 
