@@ -45,6 +45,23 @@ const SOCIAL_LINKS = {
 // ============================================
 const PROJECTS = [
   {
+    id: 'api1-dsm',
+    name: 'API 1 DSM — Negado pelo Banco',
+    tag: 'Aprendizagem por Projetos Integrados · FATEC DSM',
+    cover: '',
+    gallery: [],
+    description:
+      'Solução analítica desenvolvida para o 1º semestre de DSM na FATEC: análise de crédito inclusivo com base em dados econômicos abertos do Banco Central do Brasil.',
+    problem:
+      'Conceder crédito responsável para pessoas e negócios historicamente recusados pelas instituições financeiras tradicionais exige cruzar dados econômicos como volume, inadimplência e endividamento por região.',
+    solution:
+      'Plataforma analítica baseada em engenharia reversa e refatoração do projeto RealIT: tratamento de dados abertos do Banco Central (BCB), modelagem relacional e formulação de um Score de Oportunidade regional.',
+    role:
+      'Scrum Master (SM) e desenvolvedor na equipe Time00.dev (1º semestre de DSM na FATEC): facilitação dos ritos ágeis (Sprint Planning, Dailies, Review e Retrospectivas), gestão de prazos e backlog, além da atuação na arquitetura backend em Python/Flask e modelagem de dados.',
+    stack: ['Python', 'Flask', 'MySQL', 'MariaDB', 'Metodologia Ágil (Scrum)', 'Git'],
+    githubUrl: 'https://github.com/Time00-dev/api1--semestre',
+  },
+  {
     id: 'recebimento-materiais',
     name: 'Recebimento de Materiais',
     tag: 'Aplicação Web & PWA · Logística',
@@ -198,25 +215,20 @@ function setupMobileMenu() {
   });
 }
 
-// Renderiza os cards de projeto a partir do array PROJECTS
+// Renderiza os cards de projeto a partir do array PROJECTS (cards sem fotos)
 function renderProjects() {
   const grid = document.getElementById('projectsGrid');
   if (!grid) return;
 
   grid.innerHTML = PROJECTS.map((project, index) => {
-    const coverSrc = IMAGES[project.cover] || '';
     const featuredClass = index === 0 ? 'featured' : '';
     const githubLinkHtml = project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-github-link" onclick="event.stopPropagation()" aria-label="Ver repositório no GitHub">GitHub ↗</a>` : '';
     const techBadges = project.stack.map((t) => `<span class="tech">${t}</span>`).join('');
 
     return `
       <article class="project-card ${featuredClass}" data-project-id="${project.id}" tabindex="0" role="button" aria-label="Ver detalhes do projeto ${project.name}">
-        <div class="project-image">
-          <img src="${coverSrc}" alt="Captura de tela do projeto ${project.name}" loading="lazy" />
-          <span class="view-details">Ver detalhes →</span>
-        </div>
         <div class="project-body">
-          <div>
+          <div class="project-header">
             <div class="project-top">
               <span class="tag">${project.tag}</span>
               ${githubLinkHtml}
@@ -224,7 +236,10 @@ function renderProjects() {
             <h3>${project.name}</h3>
             <p class="project-desc">${project.description}</p>
           </div>
-          <div class="badges">${techBadges}</div>
+          <div class="project-footer">
+            <div class="badges">${techBadges}</div>
+            <span class="view-details-link">Ver detalhes <span aria-hidden="true">→</span></span>
+          </div>
         </div>
       </article>
     `;
@@ -271,7 +286,7 @@ function openProjectModal(projectId) {
     githubEl.innerHTML = '';
   }
 
-  currentGallery = project.gallery.map((key) => IMAGES[key]).filter(Boolean);
+  currentGallery = (project.gallery || []).map((key) => IMAGES[key]).filter(Boolean);
   currentImageIndex = 0;
   currentProjectName = project.name;
   renderModalGallery();
@@ -284,13 +299,21 @@ function openProjectModal(projectId) {
 }
 
 function renderModalGallery() {
+  const galleryEl = document.querySelector('.modal-gallery');
   const mainImg = document.getElementById('modalMainImg');
+  const thumbs = document.getElementById('modalThumbs');
+
+  if (!currentGallery || currentGallery.length === 0) {
+    if (galleryEl) galleryEl.style.display = 'none';
+    return;
+  }
+  if (galleryEl) galleryEl.style.display = 'block';
+
   mainImg.src = currentGallery[currentImageIndex] || '';
   mainImg.alt = currentGallery.length
     ? `Tela ${currentImageIndex + 1} do projeto ${currentProjectName}`
     : '';
 
-  const thumbs = document.getElementById('modalThumbs');
   if (currentGallery.length <= 1) {
     thumbs.innerHTML = '';
     thumbs.style.display = 'none';
