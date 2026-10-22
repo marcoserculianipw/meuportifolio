@@ -25,9 +25,10 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#apresentacao">Apresentação</a></li>
+        <li><a href="#projetos-api">Projetos API</a></li>
+        <li><a href="#projetos">Profissionais e Pessoais</a></li>
+        <li><a href="#curriculo">Informações Curriculares</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
 
@@ -36,15 +37,20 @@
   </header>
 
   <main id="conteudo">
-    <section id="topo" class="hero">
+    <section id="apresentacao" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <div class="availability"><span aria-hidden="true"></span> Disponível para estágio em tecnologia</div>
-          <p class="overline">Desenvolvimento de software • São Paulo, Brasil</p>
-          <h1>Marcos<br><strong>Erculiani</strong></h1>
-          <p class="hero-intro">Estudante de Desenvolvimento de Software Multiplataforma na FATEC. Gosto de transformar problemas bem definidos em interfaces claras e sistemas que funcionam.</p>
+          <p class="overline">FATEC São José dos Campos • Desenvolvimento de Software Multiplataforma</p>
+          <h1>Marcos Vinicius<br><strong>Erculiani Chaves</strong></h1>
+          <p class="hero-intro">Estudante de DSM na FATEC São José dos Campos. Busco oportunidade de estágio em tecnologia para atuar no desenvolvimento de aplicações web, mobile e sistemas orientados a dados, com foco em resolver problemas práticos e colaborar com equipes ágeis.</p>
+          <div class="hero-highlights">
+            <span class="mono-badge"><strong>Formação:</strong> FATEC São José dos Campos • DSM (1º Semestre)</span>
+            <span class="mono-badge"><strong>Objetivo:</strong> Estágio em Desenvolvimento de Software / TI</span>
+            <span class="mono-badge"><strong>Áreas de Interesse:</strong> Front-end (React), Mobile, Backend & Dados (Python, MySQL) e Métodos Ágeis (Scrum)</span>
+          </div>
           <div class="hero-actions">
-            <a href="#projetos" class="button button-primary">Ver projetos <span aria-hidden="true">↓</span></a>
+            <a href="#projetos-api" class="button button-primary">Ver Projetos API <span aria-hidden="true">↓</span></a>
             <a href="https://github.com/marcoserculianipw" id="githubLink" target="_blank" rel="noopener noreferrer" class="text-link">GitHub ↗</a>
             <a href="https://www.linkedin.com/in/marcos-erculiani-50b95a320/" id="linkedinLink" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn ↗</a>
           </div>
@@ -55,95 +61,131 @@
           <div class="hero-photo-frame">
             <img id="heroPhoto" alt="Marcos Vinicius Erculiani Chaves" width="720" height="900">
           </div>
-          <p>Desenvolvedor em formação<br>FATEC • DSM</p>
+          <p>Desenvolvedor em formação<br>FATEC São José dos Campos • DSM</p>
         </div>
       </div>
 
       <div class="hero-bottom container" aria-hidden="true">
-        <span>PORTFÓLIO / 2026</span>
-        <span>HTML • CSS • JAVASCRIPT • PYTHON</span>
+        <span>PORTFÓLIO ACADÊMICO DIGITAL / 2026</span>
+        <span>HTML • CSS • JAVASCRIPT • PYTHON • FLASK • MYSQL</span>
       </div>
     </section>
 
-    <section id="projetos" class="section project-section">
+    <!-- SEÇÃO 01: PROJETOS API (FATEC DSM) -->
+    <section id="projetos-api" class="section project-section api-section">
       <div class="container">
         <header class="section-header reveal">
           <p class="section-number">01</p>
           <div>
-            <p class="overline">Trabalhos selecionados</p>
-            <h2>Projetos em destaque</h2>
+            <p class="overline">Aprendizagem por Projetos Integrados • FATEC DSM</p>
+            <h2>Projetos API</h2>
           </div>
-          <p class="section-note">Projetos práticos desenvolvidos com foco em solucionar problemas reais.</p>
+          <p class="section-note">Projetos semestrais desenvolvidos em equipe sob metodologia ágil Scrum, resolvendo desafios reais com entrega de software funcional.</p>
+        </header>
+
+        <div id="apiProjectsGrid" class="projects-grid reveal"></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 02: PROJETOS PROFISSIONAIS E PESSOAIS -->
+    <section id="projetos" class="section project-section">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-number">02</p>
+          <div>
+            <p class="overline">Experiência corporativa e iniciativas autorais</p>
+            <h2>Projetos Profissionais e Pessoais</h2>
+          </div>
+          <p class="section-note">Soluções desenvolvidas para contextos operacionais reais (Intercarta) e projetos pessoais/acadêmicos.</p>
         </header>
 
         <div id="projectsGrid" class="projects-grid reveal"></div>
       </div>
     </section>
 
+    <!-- SEÇÃO 03: SOBRE MIM E ÁREAS DE INTERESSE -->
     <section id="sobre" class="section about-section">
       <div class="container about-grid">
         <header class="section-header compact reveal">
-          <p class="section-number">02</p>
+          <p class="section-number">03</p>
           <div>
-            <p class="overline">Sobre mim</p>
-            <h2>Aprendendo na prática.</h2>
+            <p class="overline">Apresentação detalhada</p>
+            <h2>Objetivos, formação e áreas de interesse.</h2>
           </div>
         </header>
 
         <div class="about-copy reveal delay-1">
-          <p class="about-lead">Comecei no Técnico em Desenvolvimento de Sistemas da ETEC e hoje curso DSM na FATEC. É uma trajetória ainda no início — e justamente por isso levo cada projeto como oportunidade de aprender de verdade.</p>
+          <p class="about-lead">Formado como Técnico em Desenvolvimento de Sistemas pela ETEC e atualmente graduando em Desenvolvimento de Software Multiplataforma (DSM) na FATEC São José dos Campos.</p>
           <div class="about-columns">
-            <p>Tenho interesse por front-end, desenvolvimento mobile e sistemas. No FNCASH, participei da construção das interfaces e da documentação, trabalhando em equipe até a entrega do projeto final.</p>
-            <p>Fora da faculdade, trabalho como Jovem Aprendiz em logística. A rotina me ensinou organização, responsabilidade e como sistemas e dados fazem parte de processos reais.</p>
+            <div>
+              <h4 style="color: var(--white); font-size: 1.05rem; margin: 0 0 8px;">Objetivos Acadêmicos & Profissionais</h4>
+              <p>Busco atuar profissionalmente através de estágio em tecnologia, aplicando conhecimentos em desenvolvimento web, mobile e sistemas back-end. Meu objetivo é evoluir como desenvolvedor de software, colaborando em projetos com metodologias ágeis e arquiteturas escaláveis.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--white); font-size: 1.05rem; margin: 0 0 8px;">Áreas de Interesse & Prática</h4>
+              <p>Tenho especial afinidade por Front-end (React, TypeScript), Desenvolvimento Mobile (React Native/Expo), Back-end com Python e bancos relacionais. Minha experiência profissional como Jovem Aprendiz em logística na Intercarta fortaleceu minha disciplina, visão de processos e capacidade analítica.</p>
+            </div>
           </div>
         </div>
 
         <div class="skills reveal">
           <p class="overline">Tecnologias com as quais já trabalhei</p>
           <dl>
-            <div><dt>Base</dt><dd>HTML, CSS, JavaScript, Python</dd></div>
-            <div><dt>Interfaces</dt><dd>React, React Native, Expo, Bootstrap</dd></div>
-            <div><dt>Dados</dt><dd>MySQL, modelagem relacional, Power BI</dd></div>
-            <div><dt>Ferramentas</dt><dd>Git, GitHub, Power Apps, Microsoft Office</dd></div>
+            <div><dt>Base</dt><dd>HTML5, CSS3, JavaScript (ES6+), Python</dd></div>
+            <div><dt>Frameworks & Libs</dt><dd>React, React Native, Expo, Flask, Bootstrap, Tailwind CSS</dd></div>
+            <div><dt>Dados</dt><dd>MySQL, MariaDB, modelagem relacional, Power BI</dd></div>
+            <div><dt>Ferramentas & Métodos</dt><dd>Git, GitHub, Scrum / Ágil, Linux / Shell Script, Power Apps</dd></div>
           </dl>
         </div>
       </div>
     </section>
 
-    <section id="trajetoria" class="section path-section">
+    <!-- SEÇÃO 04: INFORMAÇÕES CURRICULARES -->
+    <section id="curriculo" class="section path-section">
       <div class="container">
         <header class="section-header reveal">
-          <p class="section-number">03</p>
+          <p class="section-number">04</p>
           <div>
-            <p class="overline">Trajetória</p>
-            <h2>Formação e experiência</h2>
+            <p class="overline">Qualificação e desenvolvimento contínuo</p>
+            <h2>Informações Curriculares</h2>
           </div>
-          <p class="section-note">Conhecimento técnico em construção, apoiado por experiência profissional real.</p>
+          <p class="section-note">Formação acadêmica, certificações, cursos complementares e participações pertinentes ao curso de DSM.</p>
         </header>
 
         <div class="path-list reveal">
           <article>
-            <time>Atual</time>
-            <div><p class="path-kind">Experiência profissional</p><h3>Jovem Aprendiz — Logística</h3><p>Intercarta</p></div>
-            <p>Rotinas com documentos, notas fiscais, agendamento de transportes e sistemas internos. Uma experiência que fortaleceu minha organização e visão de processos.</p>
+            <time>Em andamento</time>
+            <div><p class="path-kind">Graduação</p><h3>Desenvolvimento de Software Multiplataforma</h3><p>FATEC São José dos Campos</p></div>
+            <p>Formação superior tecnológica voltada a aplicações web, mobile, banco de dados, arquitetura em nuvem e desenvolvimento orientado a projetos integrados semestrais (API).</p>
           </article>
           <article>
-            <time>Em andamento</time>
-            <div><p class="path-kind">Graduação</p><h3>Desenvolvimento de Software Multiplataforma</h3><p>FATEC</p></div>
-            <p>Formação voltada a aplicações web, mobile, banco de dados e desenvolvimento de sistemas.</p>
+            <time>Atual</time>
+            <div><p class="path-kind">Vínculo profissional</p><h3>Jovem Aprendiz — Logística</h3><p>Intercarta</p></div>
+            <p>Rotinas com notas fiscais (DANFE), agendamento de transportes, conferência física de cargas e idealização de soluções internas de automação e conferência digital.</p>
           </article>
           <article>
             <time>Concluído em 2025</time>
             <div><p class="path-kind">Curso técnico</p><h3>Técnico em Desenvolvimento de Sistemas</h3><p>ETEC</p></div>
-            <p>Primeira formação na área e origem do FNCASH, desenvolvido como projeto de conclusão de curso.</p>
+            <p>Formação técnica focada em lógica, programação orientada a objetos, modelagem de dados e interfaces, com desenvolvimento do FNCASH como TCC.</p>
+          </article>
+          <article>
+            <time>Cursos & Certificados</time>
+            <div><p class="path-kind">Formações complementares</p><h3>Cursos Extracurriculares em Tecnologia</h3><p>Git, GitHub, Python, Web & Métodos Ágeis</p></div>
+            <p>Controle de versão avançado com Git/GitHub, lógica e algoritmos em Python, desenvolvimento web moderno e cerimônias ágeis com Scrum.</p>
+          </article>
+          <article>
+            <time>Apresentações</time>
+            <div><p class="path-kind">Eventos acadêmicos</p><h3>Apresentações e Feiras de Projetos</h3><p>FATEC e ETEC</p></div>
+            <p>Defesa de entregas de software funcionais para bancas acadêmicas, incluindo a apresentação do projeto FNCASH (ETEC) e do projeto API 1 DSM - Negado pelo Banco (FATEC).</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- SEÇÃO 05: CONTATO -->
     <section id="contato" class="contact-section">
       <div class="container contact-grid reveal">
-        <p class="section-number">04</p>
+        <p class="section-number">05</p>
         <div>
           <p class="overline">Contato</p>
           <h2>Procuro minha primeira oportunidade em TI.</h2>
@@ -162,7 +204,7 @@
     <div class="container footer-inner">
       <span>Marcos Vinicius Erculiani Chaves</span>
       <span>© <span id="year">2026</span></span>
-      <a href="#topo">Voltar ao topo ↑</a>
+      <a href="#apresentacao">Voltar ao topo ↑</a>
     </div>
   </footer>
 
@@ -180,14 +222,17 @@
       <div class="modal-content">
         <div class="project-top">
           <span id="modalTag" class="tag"></span>
-          <span id="modalGithub" class="mono-small"></span>
+          <div id="modalGithub" class="project-github-links"></div>
         </div>
         <h3 id="modalTitle"></h3>
         <p id="modalDesc" class="project-desc"></p>
         <dl class="project-details">
+          <div id="modalPartnerWrapper" style="display: none;"><dt>Empresa Parceira / Cliente</dt><dd id="modalPartner"></dd></div>
           <div><dt>Problema</dt><dd id="modalProblem"></dd></div>
           <div><dt>Solução</dt><dd id="modalSolution"></dd></div>
-          <div><dt>Minha participação</dt><dd id="modalRole"></dd></div>
+          <div><dt>Minha contribuição</dt><dd id="modalRole"></dd></div>
+          <div id="modalHardSkillsWrapper" style="display: none;"><dt>Hard Skills</dt><dd id="modalHardSkills"></dd></div>
+          <div id="modalSoftSkillsWrapper" style="display: none;"><dt>Soft Skills</dt><dd id="modalSoftSkills"></dd></div>
         </dl>
         <div id="modalStack" class="badges"></div>
       </div>

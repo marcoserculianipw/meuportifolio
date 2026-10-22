@@ -46,25 +46,32 @@ const SOCIAL_LINKS = {
 const PROJECTS = [
   {
     id: 'api1-dsm',
+    category: 'api',
     name: 'API 1 DSM — Negado pelo Banco',
     tag: 'Aprendizagem por Projetos Integrados · FATEC DSM',
+    partner: 'Banco Central do Brasil (BCB) / Desafio FATEC (sem logo)',
     cover: '',
     gallery: [],
     description:
       'Solução analítica desenvolvida para o 1º semestre de DSM na FATEC: análise de crédito inclusivo com base em dados econômicos abertos do Banco Central do Brasil.',
     problem:
-      'Conceder crédito responsável para pessoas e negócios historicamente recusados pelas instituições financeiras tradicionais exige cruzar dados econômicos como volume, inadimplência e endividamento por região.',
+      'Conceder crédito responsável para pessoas e microempreendedores historicamente recusados por grandes instituições financeiras exige cruzar dados econômicos reais como volume, inadimplência e endividamento por região.',
     solution:
-      'Plataforma analítica baseada em engenharia reversa e refatoração do projeto RealIT: tratamento de dados abertos do Banco Central (BCB), modelagem relacional e formulação de um Score de Oportunidade regional.',
+      'Plataforma analítica baseada em engenharia reversa e refatoração do projeto RealIT: pipeline de ingestão e tratamento de dados econômicos públicos do Banco Central (BCB), modelagem relacional e algoritmo de cálculo do Score de Oportunidade regional.',
     role:
       'Scrum Master (SM) e desenvolvedor na equipe Time00.dev (1º semestre de DSM na FATEC): facilitação dos ritos ágeis (Sprint Planning, Dailies, Review e Retrospectivas), gestão de prazos e backlog, além da atuação na arquitetura backend em Python/Flask e modelagem de dados.',
+    hardSkills: 'Python, Flask, Modelagem Relacional (MySQL e MariaDB), Git & GitHub, Engenharia Reversa e Refatoração de Código.',
+    softSkills: 'Liderança Servidora (Scrum Master), Comunicação e alinhamento de equipe, Gestão ágil de prazos e entregas, Resolução colaborativa de problemas.',
     stack: ['Python', 'Flask', 'MySQL', 'MariaDB', 'Metodologia Ágil (Scrum)', 'Git'],
     githubUrl: 'https://github.com/Time00-dev/api1--semestre',
+    personalGithubUrl: 'https://github.com/marcoserculianipw/api1--semestre',
   },
   {
     id: 'recebimento-materiais',
+    category: 'professional',
     name: 'Recebimento de Materiais',
-    tag: 'Aplicação Web & PWA · Logística',
+    tag: 'Projeto Profissional · Logística (Intercarta)',
+    partner: 'Intercarta Embalagens (Logística)',
     cover: 'recebimentoHome',
     gallery: [
       'recebimentoHome',
@@ -81,13 +88,40 @@ const PROJECTS = [
       'Desenvolvimento de uma solução PWA responsiva com checklist operacional em 4 etapas: preenchimento de dados de transporte e nota, captura fotográfica da DANFE física pelo visor da câmera no celular/tablet, validação dos itens, classificação de conformidade e registro digital com histórico sincronizado.',
     role:
       'Iniciativa própria baseada na vivência prática como Jovem Aprendiz na Intercarta: idealizei a ferramenta para sanar o gargalo da operação, estruturei o front-end em React e TypeScript com Tailwind CSS, configurei a captura de fotos via câmera e implementei suporte PWA para uso direto em dispositivos móveis.',
+    hardSkills: 'React, TypeScript, Tailwind CSS, PWA (Service Workers), Web APIs (Câmera), Node.js.',
+    softSkills: 'Proatividade para resolução de problema operacional real, visão de processos, comunicação com equipe de armazém.',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'PWA', 'Node.js'],
     githubUrl: 'https://github.com/marcoserculianipw/recebimento-materiais',
   },
   {
+    id: 'painel-automacao',
+    category: 'professional',
+    name: 'Painel de Automação Desktop',
+    tag: 'Projeto Profissional · Automação Windows (Intercarta)',
+    partner: 'Intercarta Embalagens (Logística)',
+    cover: 'painelPrincipal',
+    gallery: [
+      'painelPrincipal',
+      'painelConfig',
+    ],
+    description:
+      'Aplicação desktop em PowerShell e interface WPF nativa do Windows para inicialização em lote de rotinas de trabalho.',
+    problem:
+      'O início do expediente de trabalho exigia abrir manualmente múltiplas planilhas, ferramentas de comunicação (Teams, Outlook, WhatsApp) e pastas de rede, demandando tempo diário e sujeitando o fluxo a esquecimentos.',
+    solution:
+      'Interface gráfica moderna em WPF nativo do Windows integrada a scripts PowerShell em segundo plano: seleção ágil dos itens desejados, abertura sequencial com intervalo para evitar sobrecarga, prevenção de duplicidade e painel de preferências personalizáveis (saudação por horário, cores e operador).',
+    role: 'Projeto de iniciativa própria para sanar um gargalo real da empresa (Intercarta): idealização completa, design da interface em XAML/WPF, implementação dos scripts em PowerShell, persistência em JSON e disparos assíncronos.',
+    hardSkills: 'PowerShell, XAML/WPF, JSON, Automação de Rotinas e Ambientes Windows.',
+    softSkills: 'Organização, iniciativa e foco em eficiência e melhoria contínua de processos.',
+    stack: ['PowerShell', 'WPF', 'XAML', 'Windows Forms', 'JSON'],
+    githubUrl: 'https://github.com/marcoserculianipw/painel-de-automacao-desktop',
+  },
+  {
     id: 'fncash',
+    category: 'personal',
     name: 'FNCASH',
-    tag: 'Projeto de Conclusão de Curso',
+    tag: 'Projeto Acadêmico / Conclusão de Curso (ETEC)',
+    partner: 'ETEC (Trabalho de Conclusão de Curso)',
     cover: 'fncashDashboard',
     gallery: [
       'fncashDashboard',
@@ -105,31 +139,16 @@ const PROJECTS = [
     solution:
       'Dashboard com saldo total, receitas e despesas do período e gráfico comparativo; gestão de contas bancárias com saldo por instituição; categorização de receitas e despesas; histórico de transações com filtros e exportação em Excel, PDF e impressão; autenticação com login e cadastro de usuário.',
     role: 'Minha contribuição no projeto FNCASH foi voltada ao desenvolvimento de parte do front-end, incluindo a criação e estilização das interfaces, além da elaboração e organização da documentação do sistema.',
+    hardSkills: 'Python, MySQL, Bootstrap, JavaScript, Modelagem Relacional e Documentação de Software.',
+    softSkills: 'Trabalho em equipe multidisciplinar, organização e comunicação técnica.',
     stack: ['Python', 'MySQL', 'Bootstrap', 'JavaScript'],
   },
   {
-    id: 'painel-automacao',
-    name: 'Painel de Automação Desktop',
-    tag: 'Automação · PowerShell & WPF',
-    cover: 'painelPrincipal',
-    gallery: [
-      'painelPrincipal',
-      'painelConfig',
-    ],
-    description:
-      'Aplicação desktop em PowerShell e interface WPF nativa do Windows para inicialização em lote de rotinas de trabalho.',
-    problem:
-      'O início do expediente de trabalho exigia abrir manualmente múltiplas planilhas, ferramentas de comunicação (Teams, Outlook, WhatsApp) e pastas de rede, demandando tempo diário e sujeitando o fluxo a esquecimentos.',
-    solution:
-      'Interface gráfica moderna em WPF nativo do Windows integrada a scripts PowerShell em segundo plano: seleção ágil dos itens desejados, abertura sequencial com intervalo para evitar sobrecarga, prevenção de duplicidade e painel de preferências personalizáveis (saudação por horário, cores e operador).',
-    role: 'Projeto de iniciativa própria para sanar um gargalo real da empresa (Intercarta): idealização completa, design da interface em XAML/WPF, implementação dos scripts em PowerShell, persistência em JSON e disparos assíncronos.',
-    stack: ['PowerShell', 'WPF', 'XAML', 'Windows Forms', 'JSON'],
-    githubUrl: 'https://github.com/marcoserculianipw/painel-de-automacao-desktop',
-  },
-  {
     id: 'lucaspelizer-nutricionista',
+    category: 'personal',
     name: 'Lucas Pelizer — Nutricionista',
-    tag: 'Landing Page · Nutrição Esportiva',
+    tag: 'Projeto Pessoal · Landing Page Nutricionista',
+    partner: 'Lucas Pelizer Nutricionista',
     cover: 'pelizerHero',
     gallery: [
       'pelizerHero',
@@ -145,6 +164,8 @@ const PROJECTS = [
     solution:
       'Landing page com design moderno, responsivo e de alta performance: seção Hero com proposta de valor, apresentação da formação e histórico do profissional, pilares da metodologia, etapas do acompanhamento passo a passo, tabela comparativa dos planos (Mensal, Bimestral e Semestral) e botões de chamada para ação (CTA) integrados.',
     role: 'Desenvolvimento front-end completo para o cliente real: planejamento da estrutura semântica em HTML5, estilização personalizada com CSS3 e Bootstrap, interatividade em JavaScript e adaptação minuciosa para qualquer tamanho de tela.',
+    hardSkills: 'HTML5 semântico, CSS3 responsivo, JavaScript, Bootstrap, Otimização de Performance e SEO.',
+    softSkills: 'Atendimento a cliente real, alinhamento de expectativas e foco em conversão e usabilidade.',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
     githubUrl: 'https://github.com/marcoserculianipw/lucaspelizer-nutricionista',
   },
@@ -216,36 +237,52 @@ function setupMobileMenu() {
 }
 
 // Renderiza os cards de projeto a partir do array PROJECTS (cards sem fotos)
-function renderProjects() {
-  const grid = document.getElementById('projectsGrid');
-  if (!grid) return;
+function renderProjectCard(project, index, isApi = false) {
+  const featuredClass = (isApi || index === 0) ? 'featured' : '';
+  let githubLinksHtml = '';
+  if (project.githubUrl) {
+    githubLinksHtml += `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-github-link" onclick="event.stopPropagation()" aria-label="Ver repositório no GitHub">${project.personalGithubUrl ? 'Equipe ↗' : 'GitHub ↗'}</a>`;
+  }
+  if (project.personalGithubUrl) {
+    githubLinksHtml += `<a href="${project.personalGithubUrl}" target="_blank" rel="noopener noreferrer" class="project-github-link personal-repo-link" onclick="event.stopPropagation()" aria-label="Ver cópia no repositório pessoal">Cópia Pessoal ↗</a>`;
+  }
+  const techBadges = project.stack.map((t) => `<span class="tech">${t}</span>`).join('');
 
-  grid.innerHTML = PROJECTS.map((project, index) => {
-    const featuredClass = index === 0 ? 'featured' : '';
-    const githubLinkHtml = project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-github-link" onclick="event.stopPropagation()" aria-label="Ver repositório no GitHub">GitHub ↗</a>` : '';
-    const techBadges = project.stack.map((t) => `<span class="tech">${t}</span>`).join('');
-
-    return `
-      <article class="project-card ${featuredClass}" data-project-id="${project.id}" tabindex="0" role="button" aria-label="Ver detalhes do projeto ${project.name}">
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-top">
-              <span class="tag">${project.tag}</span>
-              ${githubLinkHtml}
-            </div>
-            <h3>${project.name}</h3>
-            <p class="project-desc">${project.description}</p>
+  return `
+    <article class="project-card ${featuredClass}" data-project-id="${project.id}" tabindex="0" role="button" aria-label="Ver detalhes do projeto ${project.name}">
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-top">
+            <span class="tag">${project.tag}</span>
+            <div class="project-github-links">${githubLinksHtml}</div>
           </div>
-          <div class="project-footer">
-            <div class="badges">${techBadges}</div>
-            <span class="view-details-link">Ver detalhes <span aria-hidden="true">→</span></span>
-          </div>
+          <h3>${project.name}</h3>
+          <p class="project-desc">${project.description}</p>
         </div>
-      </article>
-    `;
-  }).join('');
+        <div class="project-footer">
+          <div class="badges">${techBadges}</div>
+          <span class="view-details-link">Ver detalhes <span aria-hidden="true">→</span></span>
+        </div>
+      </div>
+    </article>
+  `;
+}
 
-  grid.querySelectorAll('.project-card').forEach((card) => {
+function renderProjects() {
+  const apiGrid = document.getElementById('apiProjectsGrid');
+  const otherGrid = document.getElementById('projectsGrid');
+
+  const apiProjects = PROJECTS.filter((p) => p.category === 'api');
+  const otherProjects = PROJECTS.filter((p) => p.category !== 'api');
+
+  if (apiGrid) {
+    apiGrid.innerHTML = apiProjects.map((p, i) => renderProjectCard(p, i, true)).join('');
+  }
+  if (otherGrid) {
+    otherGrid.innerHTML = otherProjects.map((p, i) => renderProjectCard(p, i, false)).join('');
+  }
+
+  document.querySelectorAll('.project-card').forEach((card) => {
     const open = () => openProjectModal(card.dataset.projectId);
     card.addEventListener('click', open);
     card.addEventListener('keydown', (e) => {
@@ -279,11 +316,49 @@ function openProjectModal(projectId) {
     .map((t) => `<span class="tech">${t}</span>`)
     .join('');
 
+  const partnerWrap = document.getElementById('modalPartnerWrapper');
+  const partnerEl = document.getElementById('modalPartner');
+  if (partnerWrap && partnerEl) {
+    if (project.partner) {
+      partnerWrap.style.display = 'block';
+      partnerEl.textContent = project.partner;
+    } else {
+      partnerWrap.style.display = 'none';
+    }
+  }
+
+  const hardWrap = document.getElementById('modalHardSkillsWrapper');
+  const hardEl = document.getElementById('modalHardSkills');
+  if (hardWrap && hardEl) {
+    if (project.hardSkills) {
+      hardWrap.style.display = 'block';
+      hardEl.textContent = project.hardSkills;
+    } else {
+      hardWrap.style.display = 'none';
+    }
+  }
+
+  const softWrap = document.getElementById('modalSoftSkillsWrapper');
+  const softEl = document.getElementById('modalSoftSkills');
+  if (softWrap && softEl) {
+    if (project.softSkills) {
+      softWrap.style.display = 'block';
+      softEl.textContent = project.softSkills;
+    } else {
+      softWrap.style.display = 'none';
+    }
+  }
+
   const githubEl = document.getElementById('modalGithub');
-  if (project.githubUrl) {
-    githubEl.innerHTML = `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-github-link" style="color: var(--white); font-size: 0.72rem;">GitHub ↗</a>`;
-  } else {
-    githubEl.innerHTML = '';
+  if (githubEl) {
+    let modalLinksHtml = '';
+    if (project.githubUrl) {
+      modalLinksHtml += `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-github-link" style="color: var(--white); font-size: 0.72rem;">${project.personalGithubUrl ? 'Repositório da Equipe ↗' : 'GitHub ↗'}</a>`;
+    }
+    if (project.personalGithubUrl) {
+      modalLinksHtml += `<a href="${project.personalGithubUrl}" target="_blank" rel="noopener noreferrer" class="project-github-link personal-repo-link" style="font-size: 0.72rem; margin-left: 12px;">Cópia no Repositório Pessoal ↗</a>`;
+    }
+    githubEl.innerHTML = modalLinksHtml;
   }
 
   currentGallery = (project.gallery || []).map((key) => IMAGES[key]).filter(Boolean);

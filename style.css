@@ -467,6 +467,43 @@ button { font: inherit; }
   font-size: 0.65rem;
 }
 
+.hero-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 18px 0 24px;
+}
+
+.mono-badge {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.mono-badge strong {
+  color: var(--acid);
+}
+
+.project-github-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.personal-repo-link {
+  color: var(--acid) !important;
+}
+
+.personal-repo-link:hover {
+  color: var(--white) !important;
+}
+
+.api-section {
+  border-bottom: 1px solid var(--line);
+}
+
 .about-section { background: var(--paper); }
 
 .about-grid {
