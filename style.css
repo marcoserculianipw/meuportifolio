@@ -504,6 +504,45 @@ button { font: inherit; }
   border-bottom: 1px solid var(--line);
 }
 
+.curriculum-media {
+  width: 100%;
+  max-width: 340px;
+  max-height: 200px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 14px;
+  display: block;
+  transition: transform 200ms ease, border-color 200ms ease;
+  background: var(--surface-strong);
+}
+
+.event-thumb-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+.event-thumb-link:hover .curriculum-media {
+  transform: scale(1.02);
+  border-color: var(--blue);
+}
+
+.view-cert-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--acid);
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.event-thumb-link:hover .view-cert-tag {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 .about-section { background: var(--paper); }
 
 .about-grid {
