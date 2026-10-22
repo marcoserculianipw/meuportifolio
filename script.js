@@ -49,15 +49,15 @@ const PROJECTS = [
     category: 'api',
     name: 'API 1 DSM — Negado pelo Banco',
     tag: 'Aprendizagem por Projetos Integrados · FATEC DSM',
-    partner: 'Banco Central do Brasil (BCB) / Desafio FATEC (sem logo)',
+    partner: 'DM Card (Empresa Parceira)',
     cover: '',
     gallery: [],
     description:
-      'Solução analítica desenvolvida para o 1º semestre de DSM na FATEC: análise de crédito inclusivo com base em dados econômicos abertos do Banco Central do Brasil.',
+      'Solução analítica desenvolvida para o desafio proposto pela empresa parceira DM Card no 1º semestre de DSM na FATEC: análise de crédito inclusivo com base em dados econômicos abertos do Banco Central do Brasil.',
     problem:
-      'Conceder crédito responsável para pessoas e microempreendedores historicamente recusados por grandes instituições financeiras exige cruzar dados econômicos reais como volume, inadimplência e endividamento por região.',
+      'No contexto do desafio da DM Card, conceder crédito responsável para pessoas e microempreendedores historicamente recusados por grandes instituições financeiras exige cruzar dados econômicos reais como volume, inadimplência e endividamento por região.',
     solution:
-      'Plataforma analítica baseada em engenharia reversa e refatoração do projeto RealIT: pipeline de ingestão e tratamento de dados econômicos públicos do Banco Central (BCB), modelagem relacional e algoritmo de cálculo do Score de Oportunidade regional.',
+      'Plataforma analítica baseada em engenharia reversa e refatoração do projeto RealIT para a DM Card: pipeline de ingestão e tratamento de dados econômicos públicos do Banco Central (BCB), modelagem relacional e algoritmo de cálculo do Score de Oportunidade regional.',
     role:
       'Scrum Master (SM) e desenvolvedor na equipe Time00.dev (1º semestre de DSM na FATEC): facilitação dos ritos ágeis (Sprint Planning, Dailies, Review e Retrospectivas), gestão de prazos e backlog, além da atuação na arquitetura backend em Python/Flask e modelagem de dados.',
     hardSkills: 'Python, Flask, Modelagem Relacional (MySQL e MariaDB), Git & GitHub, Engenharia Reversa e Refatoração de Código.',
