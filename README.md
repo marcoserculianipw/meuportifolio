@@ -1,34 +1,33 @@
-# Portfólio — Marcos Erculiani
+# Portfólio · Marcos Erculiani
 
-Site pessoal para apresentação de projetos, formação acadêmica e trajetória em desenvolvimento de software.
+Portfólio acadêmico e profissional com os projetos desenvolvidos na FATEC São José dos Campos (DSM), ferramentas criadas para a operação logística na Intercarta e trabalhos anteriores.
 
 Demo online: https://marcoserculianipw.github.io/meuportifolio/
 
 ![Página inicial do Portfólio](docs/screenshot.png)
 
-## Sobre o projeto
+## Estrutura da página
 
-Desenvolvi meu portfólio com foco em clareza e carregamento rápido para apresentar meu perfil profissional a recrutadores técnicos. A página reúne minha formação acadêmica (Técnico pela ETEC e estudante de DSM na FATEC), projetos práticos desenvolvidos e canais diretos de contato. As imagens de apoio foram embutidas em Base64 no próprio script para assegurar que a interface funcione sem dependência de caminhos externos.
+- **Apresentação:** resumo da minha formação (Técnico em Desenvolvimento de Sistemas pela ETEC e 1º semestre de DSM na FATEC SJC), rotina atual na Intercarta e objetivo de estágio.
+- **Projetos API (FATEC DSM):** *Negado pelo Banco* (análise de crédito inclusivo com dados públicos do Banco Central em Python/Flask e MariaDB, onde atuei como Scrum Master e desenvolvedor na equipe Time00.dev).
+- **Projetos Profissionais e Pessoais:**
+  - *Recebimento de Materiais (PWA):* web app em React e TypeScript para conferência de cargas e fotos de DANFE pelo celular.
+  - *Painel de Automação Desktop:* utilitário nativo para Windows em PowerShell e WPF/XAML para abertura de sistemas e planilhas do turno.
+  - *Site · Lucas Pelizer (Nutricionista):* página responsiva para captação de pacientes no WhatsApp.
+  - *FNCASH:* sistema web de controle financeiro em Python e MySQL (TCC da ETEC).
+- **Informações Curriculares:** formação acadêmica, vínculo profissional, certificações (IBS Americas, FGV, Santander/Google) e participação em eventos (WorCAP INPE 2026 e Innovation Week SJC 2026).
+- **Contato:** links diretos para e-mail, LinkedIn e GitHub.
 
-## Seções da página
-
-- **Apresentação:** síntese do meu perfil profissional e objetivo de estágio em desenvolvimento
-- **Projetos:** apresentação do Recebimento de Materiais (aplicação PWA em React e TypeScript para logística), Painel de Automação Desktop (ferramenta operacional em PowerShell e WPF), Landing Page do Lucas Pelizer (nutricionista esportivo real) e FNCASH (sistema de gestão financeira - TCC ETEC)
-- **Sobre Mim:** histórico de formação e experiência prática de rotina como Jovem Aprendiz em logística
-- **Contato:** atalhos diretos para e-mail, perfil no LinkedIn e repositórios no GitHub
-
-## Tecnologias
+## Tecnologias utilizadas no portfólio
 
 - HTML5 semântico
-- CSS3 (Flexbox, Grid, variáveis de estilo e tipografia)
+- CSS3 (Grid, Flexbox e variáveis CSS)
 - JavaScript puro (Vanilla JS)
 
 ## Como rodar localmente
 
-Não há etapas de build ou instalação de dependências:
-
 1. Clone o repositório:
 ```bash
-git clone https://github.com/marcoserculianipw/marcos-portifolio.git
+git clone https://github.com/marcoserculianipw/meuportifolio.git
 ```
-2. Abra o arquivo `index.html` diretamente em seu navegador.
+2. Abra o arquivo `index.html` diretamente no navegador.

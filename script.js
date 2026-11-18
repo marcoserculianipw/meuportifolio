@@ -47,31 +47,33 @@ const PROJECTS = [
   {
     id: 'api1-dsm',
     category: 'api',
-    name: 'API 1 DSM — Negado pelo Banco',
-    tag: 'Aprendizagem por Projetos Integrados · FATEC DSM',
-    partner: 'DM Card (Empresa Parceira)',
+    name: 'API 1º DSM: Negado pelo Banco',
+    tag: 'FATEC DSM · 1º Semestre (2026-1)',
+    partner: 'DM Card (Parceiro Acadêmico: Prof. Fernando Masanori)',
     cover: '',
-    gallery: [],
+    gallery: [
+      'assets/api1-backlog-sprint2.png',
+    ],
     description:
-      'Solução analítica desenvolvida para o desafio proposto pela empresa parceira DM Card no 1º semestre de DSM na FATEC: análise de crédito inclusivo com base em dados econômicos abertos do Banco Central do Brasil.',
+      'Plataforma web em Python/Flask e MariaDB para cruzar dados abertos do Banco Central e encontrar regiões com potencial de crédito que os bancos tradicionais costumam ignorar.',
     problem:
-      'No contexto do desafio da DM Card, conceder crédito responsável para pessoas e microempreendedores historicamente recusados por grandes instituições financeiras exige cruzar dados econômicos reais como volume, inadimplência e endividamento por região.',
+      'Quem pede crédito em regiões periféricas ou com pouca cobertura bancária costuma ser barrado pelos critérios tradicionais de risco. A proposta trazida para o 1º semestre foi evoluir o projeto veterano RealIT: sair de uma análise estática em notebook e entregar uma aplicação web capaz de ranquear sub-regiões do país cruzando risco de inadimplência com potencial econômico real.',
     solution:
-      'Plataforma analítica baseada em engenharia reversa e refatoração do projeto RealIT para a DM Card: pipeline de ingestão e tratamento de dados econômicos públicos do Banco Central (BCB), modelagem relacional e algoritmo de cálculo do Score de Oportunidade regional.',
+      'Dividimos o cálculo do Score de Oportunidade (0 a 100) em dois eixos com notas de 1 a 5: Eixo I (risco: inadimplência real, fragilidade de renda, aging da dívida e vulnerabilidade social) e Eixo II (potencial: maturidade de uso do Pix, crescimento populacional e bônus demográfico). Os dados do BCB são tratados no Google Colab e enviados via JSON para o endpoint POST /api/carga autenticado por token (HMAC). O Flask grava tudo em MariaDB/MySQL usando SQL puro parametrizado (sem ORM, por restrição do projeto) e serve o mapa e os rankings filtráveis por mês (AAAAMM), região, UF e sub-região (2 primeiros dígitos do CEP).',
     role:
-      'Scrum Master (SM) e desenvolvedor na equipe Time00.dev (1º semestre de DSM na FATEC): facilitação dos ritos ágeis (Sprint Planning, Dailies, Review e Retrospectivas), gestão de prazos e backlog, além da atuação na arquitetura backend em Python/Flask e modelagem de dados.',
-    hardSkills: 'Python, Flask, Modelagem Relacional (MySQL e MariaDB), Git & GitHub, Engenharia Reversa e Refatoração de Código.',
-    softSkills: 'Liderança Servidora (Scrum Master), Comunicação e alinhamento de equipe, Gestão ágil de prazos e entregas, Resolução colaborativa de problemas.',
-    stack: ['Python', 'Flask', 'MySQL', 'MariaDB', 'Metodologia Ágil (Scrum)', 'Git'],
+      'Fui o Scrum Master da equipe Time00.dev (9 integrantes) e também atuei no código do back-end e banco. Como SM, organizei o backlog das Sprints no GitHub Projects, defini o DoR/DoD com o time, destravei dependências entre quem estava no Colab e quem estava no front-end e conduzi Planning, Dailies, Review e Retrospectiva. No código, trabalhei na refatoração da base herdada do RealIT, na definição da tabela resultado_mensal (onde precisamos usar chave composta ano_mes + uf + sub_regiao porque o prefixo de CEP "69" se repete em AC, AM e RR) e nas rotas Flask.',
+    hardSkills: 'Python 3, Flask, SQL puro em MariaDB/MySQL (PyMySQL sem ORM), Google Colab, validação de API e autenticação por token (HMAC), testes com Pytest, Git e GitHub.',
+    softSkills: 'Facilitação Scrum em time de 9 pessoas, negociação de escopo com o PO, divisão de tarefas entre sub-times (dados, back e front) e revisão de Pull Requests.',
+    stack: ['Python', 'Flask', 'MariaDB / MySQL', 'SQL Puro', 'Google Colab', 'Scrum'],
     githubUrl: 'https://github.com/Time00-dev/api1--semestre',
     personalGithubUrl: 'https://github.com/marcoserculianipw/api1--semestre',
   },
   {
     id: 'recebimento-materiais',
     category: 'professional',
-    name: 'Recebimento de Materiais',
-    tag: 'Projeto Profissional · Logística (Intercarta)',
-    partner: 'Intercarta Embalagens (Logística)',
+    name: 'Recebimento de Materiais (PWA)',
+    tag: 'Projeto Profissional · Intercarta',
+    partner: 'Intercarta Embalagens (Setor de Logística)',
     cover: 'recebimentoHome',
     gallery: [
       'recebimentoHome',
@@ -81,15 +83,15 @@ const PROJECTS = [
       'recebimentoHistorico',
     ],
     description:
-      'Aplicação web progressiva (PWA) desenvolvida para digitalizar e agilizar a conferência física de notas fiscais e recebimento de cargas na logística.',
+      'Web app feito para celular que substitui o bloco de papel na conferência de cargas e notas fiscais (DANFE) no pátio da logística.',
     problem:
-      'A rotina de recebimento de mercadorias no armazém dependia de processos manuais em papel para conferência física de itens e notas fiscais (DANFE), gerando lentidão no descarregamento, risco de divergências não registradas e retrabalho na digitação.',
+      'No recebimento de mercadorias da Intercarta, a conferência da carga e da DANFE era anotada no papel no meio do armazém e digitada depois. Quando dava divergência num lote, ninguém achava a foto da nota ou lembrava quem tinha recebido, além do retrabalho de passar tudo a limpo.',
     solution:
-      'Desenvolvimento de uma solução PWA responsiva com checklist operacional em 4 etapas: preenchimento de dados de transporte e nota, captura fotográfica da DANFE física pelo visor da câmera no celular/tablet, validação dos itens, classificação de conformidade e registro digital com histórico sincronizado.',
+      'Criei um PWA em React e TypeScript pensado para usar com uma mão só no celular ou tablet. O fluxo tem 4 passos diretos: dados da transportadora/nota, foto da DANFE tirada direto pelo navegador (Web MediaDevices API), checklist de avarias/divergências e histórico de recebimentos salvo localmente com sincronização.',
     role:
-      'Iniciativa própria baseada na vivência prática como Jovem Aprendiz na Intercarta: idealizei a ferramenta para sanar o gargalo da operação, estruturei o front-end em React e TypeScript com Tailwind CSS, configurei a captura de fotos via câmera e implementei suporte PWA para uso direto em dispositivos móveis.',
-    hardSkills: 'React, TypeScript, Tailwind CSS, PWA (Service Workers), Web APIs (Câmera), Node.js.',
-    softSkills: 'Proatividade para resolução de problema operacional real, visão de processos, comunicação com equipe de armazém.',
+      'Ninguém me pediu esse sistema: eu mesmo fazia a conferência como Jovem Aprendiz, cansei do processo no papel e decidi programar uma versão funcional. Desenhei a tela com botões grandes para uso em pé no galpão, integrei a câmera nativa do navegador e configurei o Service Worker para o app abrir rápido mesmo quando o sinal de Wi-Fi do armazém oscila.',
+    hardSkills: 'React, TypeScript, Tailwind CSS, PWA (Service Workers), API de Câmera do navegador (MediaDevices) e Node.js.',
+    softSkills: 'Identificar um problema real no próprio trabalho, conversar com os conferentes para ajustar a tela ao uso prático e entregar sem depender de demanda externa.',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'PWA', 'Node.js'],
     githubUrl: 'https://github.com/marcoserculianipw/recebimento-materiais',
   },
@@ -97,30 +99,56 @@ const PROJECTS = [
     id: 'painel-automacao',
     category: 'professional',
     name: 'Painel de Automação Desktop',
-    tag: 'Projeto Profissional · Automação Windows (Intercarta)',
-    partner: 'Intercarta Embalagens (Logística)',
+    tag: 'Projeto Profissional · Intercarta',
+    partner: 'Intercarta Embalagens (Setor de Logística)',
     cover: 'painelPrincipal',
     gallery: [
       'painelPrincipal',
       'painelConfig',
     ],
     description:
-      'Aplicação desktop em PowerShell e interface WPF nativa do Windows para inicialização em lote de rotinas de trabalho.',
+      'Utilitário nativo para Windows (PowerShell + WPF) que abre e posiciona todas as planilhas, pastas de rede e sistemas do turno com um clique.',
     problem:
-      'O início do expediente de trabalho exigia abrir manualmente múltiplas planilhas, ferramentas de comunicação (Teams, Outlook, WhatsApp) e pastas de rede, demandando tempo diário e sujeitando o fluxo a esquecimentos.',
+      'Todo início de turno na logística começava com os mesmos 10 minutos abrindo planilhas de controle, pastas na rede local, Outlook, Teams e WhatsApp. Além de chato, era comum esquecer uma planilha de agendamento fechada ou abrir a mesma janela duas vezes.',
     solution:
-      'Interface gráfica moderna em WPF nativo do Windows integrada a scripts PowerShell em segundo plano: seleção ágil dos itens desejados, abertura sequencial com intervalo para evitar sobrecarga, prevenção de duplicidade e painel de preferências personalizáveis (saudação por horário, cores e operador).',
-    role: 'Projeto de iniciativa própria para sanar um gargalo real da empresa (Intercarta): idealização completa, design da interface em XAML/WPF, implementação dos scripts em PowerShell, persistência em JSON e disparos assíncronos.',
-    hardSkills: 'PowerShell, XAML/WPF, JSON, Automação de Rotinas e Ambientes Windows.',
-    softSkills: 'Organização, iniciativa e foco em eficiência e melhoria contínua de processos.',
-    stack: ['PowerShell', 'WPF', 'XAML', 'Windows Forms', 'JSON'],
+      'Em vez de usar Python ou Electron (que exigiriam instalar runtime nas máquinas travadas da empresa), usei PowerShell com interface gráfica em XAML/WPF, que já roda nativo em qualquer Windows. O painel permite escolher o que abrir, dispara cada programa com um pequeno intervalo para não travar o PC, verifica processos abertos para não duplicar janelas e salva as preferências de cada operador num arquivo JSON.',
+    role: 'Fiz o projeto inteiro sozinho: desenhei a tela em XAML, escrevi a lógica de verificação de processos e disparo assíncrono em PowerShell e criei a tela de configuração para que outros colegas do setor pudessem cadastrar seus próprios atalhos e pastas.',
+    hardSkills: 'PowerShell, interface gráfica com WPF/XAML, manipulação de processos do Windows e persistência em JSON.',
+    softSkills: 'Escolher a tecnologia certa para a restrição do ambiente (máquinas corporativas sem permissão de instalar programas externos) e pensar na usabilidade para colegas não-técnicos.',
+    stack: ['PowerShell', 'WPF', 'XAML', 'JSON'],
     githubUrl: 'https://github.com/marcoserculianipw/painel-de-automacao-desktop',
+  },
+  {
+    id: 'lucaspelizer-nutricionista',
+    category: 'personal',
+    name: 'Site · Lucas Pelizer (Nutricionista)',
+    tag: 'Freelance · Cliente Real',
+    partner: 'Lucas Pelizer (Nutricionista Esportivo)',
+    cover: 'pelizerHero',
+    gallery: [
+      'pelizerHero',
+      'pelizerSobre',
+      'pelizerMetodo',
+      'pelizerComoFunciona',
+      'pelizerPlanos',
+    ],
+    description:
+      'Página de apresentação e captação de pacientes feita para um nutricionista esportivo, levando o visitante direto para o agendamento no WhatsApp.',
+    problem:
+      'O Lucas atendia por indicação e Instagram, mas perdia tempo explicando todo dia no WhatsApp como funcionava a consulta e a diferença entre os planos. Ele precisava de uma página rápida que explicasse o método dele antes do paciente chamar no chat.',
+    solution:
+      'Construí uma página estática em HTML, CSS, Bootstrap e JavaScript sem peso desnecessário. Organizei o conteúdo na ordem das dúvidas que ele mais recebia: para quem é o acompanhamento, como funcionam as 4 etapas da consulta, tabela comparativa dos planos (Mensal, Bimestral e Semestral) e botões de WhatsApp já com mensagem preenchida conforme o plano escolhido.',
+    role: 'Conversei com o cliente para levantar as dúvidas recorrentes dos pacientes, estruturei o texto e o layout, codifiquei todo o front-end responsivo e ajustei o carregamento para abrir rápido no navegador interno do Instagram no celular.',
+    hardSkills: 'HTML5 semântico, CSS3, Bootstrap, JavaScript e otimização para acesso mobile.',
+    softSkills: 'Levantamento de requisitos com cliente fora da área de TI, tradução do serviço dele em uma página clara e cumprimento de prazo.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    githubUrl: 'https://github.com/marcoserculianipw/lucaspelizer-nutricionista',
   },
   {
     id: 'fncash',
     category: 'personal',
-    name: 'FNCASH',
-    tag: 'Projeto Acadêmico / Conclusão de Curso (ETEC)',
+    name: 'FNCASH · Controle Financeiro',
+    tag: 'TCC do Técnico · ETEC (2025)',
     partner: 'ETEC (Trabalho de Conclusão de Curso)',
     cover: 'fncashDashboard',
     gallery: [
@@ -133,41 +161,15 @@ const PROJECTS = [
       'fncashCadastro',
     ],
     description:
-      'Sistema de controle e gestão financeira, desenvolvido como projeto de encerramento da minha formação técnica.',
+      'Sistema web em Python e MySQL para controle de contas bancárias, receitas e despesas, desenvolvido como TCC na ETEC.',
     problem:
-      'Falta de uma ferramenta simples para acompanhar contas, receitas e despesas em um só lugar, com visão clara do saldo e das movimentações financeiras.',
+      'Para o trabalho de conclusão do curso técnico, queríamos construir um sistema CRUD completo com autenticação e relatórios que resolvesse a bagunça de anotar gastos pessoais em várias planilhas separadas.',
     solution:
-      'Dashboard com saldo total, receitas e despesas do período e gráfico comparativo; gestão de contas bancárias com saldo por instituição; categorização de receitas e despesas; histórico de transações com filtros e exportação em Excel, PDF e impressão; autenticação com login e cadastro de usuário.',
-    role: 'Minha contribuição no projeto FNCASH foi voltada ao desenvolvimento de parte do front-end, incluindo a criação e estilização das interfaces, além da elaboração e organização da documentação do sistema.',
-    hardSkills: 'Python, MySQL, Bootstrap, JavaScript, Modelagem Relacional e Documentação de Software.',
-    softSkills: 'Trabalho em equipe multidisciplinar, organização e comunicação técnica.',
+      'Aplicação web com login/cadastro, painel com saldo consolidado e gráfico de entradas vs. saídas do mês, cadastro de múltiplas contas bancárias, filtros por categoria/data e exportação do extrato para Excel, PDF ou impressão.',
+    role: 'Fiquei responsável por construir as telas do front-end (dashboard, tabelas de transações e modais de cadastro usando HTML, CSS, Bootstrap e JS) e por escrever a documentação técnica e a modelagem do banco para a banca da ETEC.',
+    hardSkills: 'HTML5, CSS3, Bootstrap, JavaScript, integração com back-end Python/MySQL e documentação técnica (DER/MER).',
+    softSkills: 'Divisão de entregas em grupo durante o ano letivo, padronização visual das telas e apresentação para a banca avaliadora.',
     stack: ['Python', 'MySQL', 'Bootstrap', 'JavaScript'],
-  },
-  {
-    id: 'lucaspelizer-nutricionista',
-    category: 'personal',
-    name: 'Lucas Pelizer — Nutricionista',
-    tag: 'Projeto Pessoal · Landing Page Nutricionista',
-    partner: 'Lucas Pelizer Nutricionista',
-    cover: 'pelizerHero',
-    gallery: [
-      'pelizerHero',
-      'pelizerSobre',
-      'pelizerMetodo',
-      'pelizerComoFunciona',
-      'pelizerPlanos',
-    ],
-    description:
-      'Landing page profissional de alta conversão para nutricionista esportivo real, focada em metodologia individual e captação de pacientes.',
-    problem:
-      'O cliente necessitava de uma presença online profissional e estruturada para demonstrar autoridade, expor sua metodologia prática sem dietas restritivas genéricas, detalhar os planos de consulta e centralizar a conversão de novos pacientes diretamente para o WhatsApp.',
-    solution:
-      'Landing page com design moderno, responsivo e de alta performance: seção Hero com proposta de valor, apresentação da formação e histórico do profissional, pilares da metodologia, etapas do acompanhamento passo a passo, tabela comparativa dos planos (Mensal, Bimestral e Semestral) e botões de chamada para ação (CTA) integrados.',
-    role: 'Desenvolvimento front-end completo para o cliente real: planejamento da estrutura semântica em HTML5, estilização personalizada com CSS3 e Bootstrap, interatividade em JavaScript e adaptação minuciosa para qualquer tamanho de tela.',
-    hardSkills: 'HTML5 semântico, CSS3 responsivo, JavaScript, Bootstrap, Otimização de Performance e SEO.',
-    softSkills: 'Atendimento a cliente real, alinhamento de expectativas e foco em conversão e usabilidade.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
-    githubUrl: 'https://github.com/marcoserculianipw/lucaspelizer-nutricionista',
   },
 ];
 // Preenche os links de contato no header e na seção de contato
@@ -361,7 +363,7 @@ function openProjectModal(projectId) {
     githubEl.innerHTML = modalLinksHtml;
   }
 
-  currentGallery = (project.gallery || []).map((key) => IMAGES[key]).filter(Boolean);
+  currentGallery = (project.gallery || []).map((key) => IMAGES[key] || key).filter(Boolean);
   currentImageIndex = 0;
   currentProjectName = project.name;
   renderModalGallery();

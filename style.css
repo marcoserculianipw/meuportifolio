@@ -330,26 +330,27 @@ button { font: inherit; }
   flex-direction: column;
   color: var(--ink);
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--line);
   cursor: pointer;
-  transition: border-color 220ms ease, transform 220ms ease, background 220ms ease;
+  transition: border-color 150ms ease, background 150ms ease;
   position: relative;
 }
 
 .project-card:hover {
-  border-color: rgba(255, 255, 255, 0.45);
-  transform: translateY(-4px);
+  border-color: var(--ink);
   background: var(--surface-strong);
 }
 
 .project-card.featured {
   grid-column: 1 / -1;
-  border-color: rgba(76, 125, 255, 0.35);
-  background: linear-gradient(180deg, var(--surface) 0%, rgba(21, 28, 39, 0.85) 100%);
+  border-color: var(--ink);
+  border-left: 4px solid var(--acid);
+  background: var(--surface);
 }
 
 .project-card.featured:hover {
-  border-color: var(--blue);
+  border-color: var(--white);
+  border-left-color: var(--acid);
 }
 
 .project-body {
