@@ -2,7 +2,7 @@
 
 Site pessoal para apresentação de projetos, formação acadêmica e trajetória em desenvolvimento de software.
 
-Demo online: https://marcoserculianipw.github.io/marcos-portifolio/
+Demo online: https://marcoserculianipw.github.io/meuportifolio/
 
 ![Página inicial do Portfólio](docs/screenshot.png)
 
